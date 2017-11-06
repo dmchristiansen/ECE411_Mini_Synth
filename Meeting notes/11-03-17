@@ -1,0 +1,74 @@
+11-03-2017
+
+What got done / what didn’t
+
+Aaron: 
+Amplifier not tested/built due to confusion over single/separate supply for the audio 
+	Amplifier.  
+2.5 V Zeners obtained (1N5222b). 
+LiPo batteries obtained
+
+	NEED to do: design offboard audio amp, design boost converter, finalize schematic
+
+Daniel:
+	Prototyped 4-sensor polling loop
+	Began prototyping wavetable code
+	Still need to find correct pinouts & registers for 128a1u
+
+Tyler:
+	Researched battery charging ic
+	Still need to select ic and layout on eagle
+
+Jesse:
+	SImulated regulator inputs
+	Designed headphone out
+
+Tsegaslase:
+
+
+
+General Notes
+
+We should keep pretty much everything on github
+
+Also, multiple meeting note files / mirroring the important stuff elsewhere
+
+How do we want to do the filters for the inputs?  A daughter board would simplify our PCB and allow us to adjust component values to better 
+
+Start coding in C, without the Arduino IDE
+
+We need to start thinking about the physical design
+
+What to ask greenberg:
+	- Git questions
+	- Do we need to be submitting our milestone things?
+
+
+What’s due by Thursday
+
+Preliminary layout for pcb
+
+To do by next meeting
+
+ Get a working daughter board for Piezo filter and Audio Amp
+
+
+Aaron:
+	Work on boost converter
+	Work on audio amplifier
+
+Daniel:
+	Write wavetable prototype
+	Write polling loop in C
+	Find correct pins for 128 uC
+	Learn how to use programmer
+
+Jesse:
+	Work on on board amp / audio out
+	Make schematic for input filters
+
+Tyler:
+	Work on charging circuit
+
+Tsegaslase:
+	Finish block diagram (HW #5)
