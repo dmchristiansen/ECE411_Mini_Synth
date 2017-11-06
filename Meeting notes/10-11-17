@@ -1,0 +1,21 @@
+10/11/2017
+
+	Discussion:
+	- Sensors are ordered
+	- Who’s our fifth person?
+	- What’s our output like?
+	-MIDI vs MP3 (codecs, data size
+	- Choice of processor: what proc should we choose? It needs to be able to have a good enough baud rate for playback
+		-Do we need a seperate MIDI chip?
+	-What language should we program the chip in?
+	-What do we want our project to look like? (physically
+	-Choice of pads: piezo vs pressure, or both?
+
+Need a better focus on what we our project to do (scope)
+
+Daniel has already ordered a few pieces of equipment
+
+	To do:
+	- Test sensors once they arrive
+	- Research MIDI synth chips / audio output
+	- Research SD card readers & associated requirements
