@@ -1,0 +1,103 @@
+10/27/2017 - Meeting notes
+
+
+Agenda:
+Any new concerns or developments
+SD concern about being able to read from the slot to the microcontroller - https://www.youtube.com/watch?v=XWJCmbmHYRoneed to test
+Centralization
+Refocusing on what we want our project to be/do based on feedback from lectures and feedback about the PDS
+-Tyler: make an exact requirements and performance list for our project
+Code for microcontroller needs to be planned for
+	Here are some links that might be useful.
+This project is closer to our project 
+https://www.youtube.com/watch?v=wlz0OMyMwJw
+
+This project is playing back sound from sd card using arduino 
+https://circuitdigest.com/microcontroller-projects/arduino-audio-music-player
+
+
+
+	
+
+
+
+Work based scheduling
+Balancing work between members (who’s going to do what from here on out?)
+Volunteered work vs specialty assignments
+Scheduling
+Need to setup milestones, deadlines, etc. based off of M$ project (HW 4)
+Retroactive entries
+Documentation
+Weekly task reports need to be made
+Retroactive entries
+Revise PDS?
+Log and project books?
+Refine wiki
+Github and versioning control
+Need to start utilizing versioning control on github
+Does everyone know how to use? 
+Do we need to have  a training session to use git?
+Need to start putting the Eagle files and our other documentation on to Git
+Do we need to start planning for Code?
+Prototyping and Testing
+Need documentation and plans for testing
+Performance requirements
+Revision plans
+Need finalized layout before Osh Park due date (11/16)
+Stages
+Components - performance and feedback
+Module circuits (blocks from diagrams) - performance and testing
+Whole prototype testing
+Future developments 
+quick study/review for final exam?
+
+
+General notes:
+- Everyone learn git
+- Install MS Project
+
+	LiPo Battery 18650 (3.7v) - 
+	LiPo Battery Charging IC
+https://www.digikey.com/product-detail/en/skyworks-solutions-inc/AAT3693IDH-AA-T1/863-1512-1-ND/4246137
+
+	Begin keeping change logs
+Need RF choke and capacitors to regulate analog Vcc
+Daniel has begun test interfacing code for the atmel processor as well as having a prototype circuit for the piezo sensors
+
+Potential sound changing method: Using DC value to vary capacitance and change frequency of waveform via an analog circuit
+
+How do we interpolate several sine waves using a wave table?
+
+ATXMEGA128A1U Electrical Characteristics page 74 of datasheet
+http://www.atmel.com/images/Atmel-8385-8-and-16-bit-AVR-Microcontroller-ATxmega64A1U-ATxmega128A1U_datasheet.pdf
+
+
+
+Progress Report for Week 5 (10/27/2017)
+(5 day)
+
+To do by next week:
+
+Daniel - 
+Prototype code for 4-sensor input polling loop.  
+Prototype code for wavetable output functionality. 
+**look into LED on in output**
+Look into register config for 128a1u
+
+Tyler - Design battery power circuit, switching supply with micro usb power in.
+
+Aaron - get prototype of audio amplifier working (ugly construction) and if successful, import to Eagle. Use Gantter on and test compatibility with Project so everyone on the team can work on the project file. Bring 18650 battery. Get 3.3 V zeners at surplus gizmos
+
+Jesse - help with audio amplifier 
+	pin outs for the headphone out. 
+	Design filter-pad rectifier
+
+Tsegaslase - list of core functionality and requirements 
+
+For All - Do Git tutorial, Get familiarized with Project/Gantt files, reorganize and cleanup  documentation on Drive and Wiki
+
+
+To do by next week:
+
+Refine layout
+Refine block diagram
