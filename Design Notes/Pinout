@@ -1,0 +1,28 @@
+This is a list of the pins on the ATxmega128A1U that are going to be used, and what they're connected to.
+
+Sensor inputs:
+  Port A, pins 93 - 99
+  93 = GND
+  94 = AVcc
+  95 = Aref
+  96 = Sensor 1
+  97 = Sensor 2
+  98 = Sensor 3
+  99 = Sensor 4
+
+
+Audio output:
+  Port B, pin 7
+  (Vcc can be used as Vref for DAC)
+  
+JTAG: (maybe not needed?)
+  Port B, pins 9 - 12
+  9 = TMS
+  10 = TDI
+  11 = TCK
+  12 = TDO
+  
+PDI:
+  Port R, pins 89 - 90
+  89 = PDI_DATA
+  90 = PDI_CLOCK
