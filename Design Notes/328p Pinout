@@ -1,0 +1,35 @@
+
+pin 1 ------- Digital pin  (PWM)
+pin 2 ------- Digital pin 
+pin 3 ------- Gnd 
+pin 4 ------- VCC
+pin 5 ------- Gnd
+pin 6 ------- VCC
+pin 7 ------- Crystal 
+pin 8 ------- Crystal 
+pin 9 ------- Digital pin (PWM)
+pin 10 ------ Digital pin (PWM)
+pin 11 ------ Digital pin 
+pin 12 ------ Digital pin 
+pin 13 ------ Digital pin (PWM)
+pin 14 ------ Digital pin (PWM)
+pin 15 ------ Digtial pin (MOSI) (PWM)
+pin 16 ------ Digital pin MISO
+pin 17 ------ Digital pin 
+pin 18 ------ AVCC
+pin 19 ------ Analog input 
+pin 20 ------ AREF
+pin 21 ------ Gnd
+pin 22 ------ Analog input 
+pin 23 ------ Analog input 
+pin 24 ------ Analog input
+pin 25 ------ Analog input 
+pin 26 ------ Analog input 
+pin 27 ------ Analog input 
+pin 28 ------ Analog input
+pin 29 ------ RESET
+pin 30 ------ Digital pin (RX)
+pin 31 ------ Digital pin (TX)
+pin 32 ------ Digital pin 
+
+
