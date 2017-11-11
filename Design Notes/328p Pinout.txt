@@ -1,3 +1,34 @@
+Connections to make (32 pin TQFP):
+
+Sensor input-
+
+Pin 23 --- ADC0
+Pin 24 --- ADC1
+Pin 25 --- ADC2
+Pin 26 --- ADC3
+
+Audio out-
+
+Pin 13 -- OC1A (Output of 16 bit Timer/Counter)
+
+Power-
+
+Pin 3 --- GND
+Pin 4 --- Vcc
+Pin 5 --- GND
+Pin 6 --- Vcc
+Pin 18 --- AVcc
+Pin 21 --- GND
+
+ICSP-
+
+Pin 29 --- Reset
+Pin 15 --- MOSI
+Pin 16 --- MISO
+Pin 17 --- SCK
+
+
+
 
 pin 1 ------- Digital pin  (PWM)
 pin 2 ------- Digital pin 
