@@ -1,14 +1,14 @@
 Connections to make (32 pin TQFP):
 
 Sensor input-
-
+(Port C 0-3)
 Pin 23 --- ADC0
 Pin 24 --- ADC1
 Pin 25 --- ADC2
 Pin 26 --- ADC3
 
 Audio out-
-
+(Port B 1)
 Pin 13 -- OC1A (Output of 16 bit Timer/Counter)
 
 Power-
@@ -28,12 +28,12 @@ Pin 16 --- MISO
 Pin 17 --- SCK
 
 Clock-
-
+(Port B 6-7)
 Pin 7 --- XTAL1
 Pin 8 --- XTAL2
 
 LEDs-
-
+(Port D 0-3)
 Pin 30 --- LED0
 Pin 31 --- LED1
 Pin 32 --- LED2
