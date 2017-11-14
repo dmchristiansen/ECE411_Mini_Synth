@@ -1,5 +1,16 @@
 Connections to make (32 pin TQFP):
 
+SD Card -
+(Note that these share pins with the ICSP interface)
+Pin 14 (PB6/SS)   --- SD Pin 1 (DAT3/CS)
+Pin 15 (PB3/MOSI) --- SD Pin 2 (CMD/DI)
+                      SD Pin 3 (Vss/GND)
+                      SD Pin 4 (Vdd)
+Pin 17 (PB5/SCK)  --- SD Pin 5 (SCLK)
+                      SD Pin 6 (Vss/GND)
+Pin 16 (PB4/MISO) --- SD Pin 7 (DATO)
+
+
 Sensor input-
 (Port C 0-3)
 Pin 23 --- ADC0
