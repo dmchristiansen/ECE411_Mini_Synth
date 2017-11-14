@@ -9,7 +9,8 @@ Pin 15 (PB3/MOSI) --- SD Pin 2 (CMD/DI)
 Pin 17 (PB5/SCK)  --- SD Pin 5 (SCLK)
                       SD Pin 6 (Vss/GND)
 Pin 16 (PB4/MISO) --- SD Pin 7 (DATO)
-
+                      SD Pin 8 (NC)
+                      SD Pin 9 (NC)
 
 Sensor input-
 (Port C 0-3)
