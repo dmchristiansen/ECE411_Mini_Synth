@@ -33,6 +33,7 @@ Pin 5 --- GND
 Pin 6 --- Vcc
 Pin 18 --- AVcc
 Pin 21 --- GND
+Pin 29 --- Reset (connect w/ 10k pullup)
 
 ICSP-
 
