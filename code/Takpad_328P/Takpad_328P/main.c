@@ -1,18 +1,27 @@
 /*
  * Takpad_328P.c
- *
+ * Version 0.0.2
+ * Last updated: 11/14/2017
  * Author:  ECE411 Group 11, Fall 2017
- * 
- * 
  */
 
 /*
+ * Fuses: 0xFD, 0xD6, 0xFF
+ * 
  * TO DO:
- *  Implement wave tables
- *  Set up ADC interrupts
  *
+ *  Implement wave tables
+ *   Create tables
+ *   Set up interrupt routine
+ *   
+ *  Set up SD Card interface
+ *   Probably just import a library
+ *  
+ *  Make this not one giant file ffs
  */ 
 
+#define F_CPU 16000000UL // 16 MHz
+#include <util/delay.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
@@ -30,7 +39,7 @@ int main(void)
 {
 	// We're only using high byte of sensor readings
 	// sensor_threshold should be (threshold >> 2)
-	uint8_t sensor_threshold = 0x32; // 200
+	uint8_t sensor_threshold = 0x32; 
 	
 	// Storage for ADC readings
 	uint8_t reading[4] = {0}, prev_reading[4] = {0}, peak_reading[4] = {0};
@@ -41,23 +50,26 @@ int main(void)
 	adc_init();
 	io_init();
 	
+	//PORTD |= 0x0F;
+	
+	
 	// Polling loop
 	while (1)
 	{
 		
-		// Turn on LED when sensor reading is > threshold
-		for (i = 0; i < 4; i++)
+		for	(i = 0; i < 4; i++)
 		{
+			// Turn on LED when sensor reading is > threshold
 			if (trigger[i])
 				PORTD |= (1 << i);
 			else
 				PORTD &= ~(1 << i);
-		}
-		
-		for	(i = 0; i < 4; i++)
-		{
+			
+			// update sensor reading
 			prev_reading[i] = reading[i];
 			reading[i] = read_ADC(i);
+			
+			// update note state
 			if (reading[i] >= sensor_threshold)
 			{
 				peak_reading[i] = reading[i];
@@ -72,21 +84,20 @@ int main(void)
 				trigger[i] = 0;
 			}
 		}
+		
+		//_delay_ms(50);
 	}
+	
 
 
 	
 }
 
-ISR
-
-SIGNAL()
-
 // Read ADC, blocking read
 uint8_t read_ADC(uint8_t ADC_Channel)
 {
 	// Set channel mux in ADMUX
-	ADMUX |= (ADMUX & 0xF0) | (ADC_Channel & 0x0F);
+	ADMUX = (ADMUX & 0xF0) | (ADC_Channel & 0x0F);
 	// Set start conversion bit
 	ADCSRA |= (1 << ADSC);
 	// Loop until conversion is complete
