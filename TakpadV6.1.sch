@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.1">
+<eagle version="8.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -13081,8 +13081,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </devices>
 <spice>
 <pinmapping spiceprefix="R">
-<pinmap gate="G$1" pin="1" pinorder="1"/>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
+<pinmap gate="G$1" pin="1" pinorder="1"/>
 </pinmapping>
 </spice>
 </deviceset>
@@ -14299,8 +14299,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </devices>
 <spice>
 <pinmapping spiceprefix="R">
-<pinmap gate="G$1" pin="1" pinorder="1"/>
 <pinmap gate="G$1" pin="2" pinorder="2"/>
+<pinmap gate="G$1" pin="1" pinorder="1"/>
 </pinmapping>
 </spice>
 </deviceset>
@@ -19217,8 +19217,12 @@ Example Datasheet</description>
 <pinref part="U1" gate="U$1" pin="VCC@6"/>
 <wire x1="-50.8" y1="17.78" x2="-66.04" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="17.78" x2="-66.04" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-66.04" y1="27.94" x2="-66.04" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="27.94" x2="-66.04" y2="22.86" width="0.1524" layer="91"/>
 <junction x="-66.04" y="20.32"/>
+<pinref part="U1" gate="U$1" pin="AVCC"/>
+<wire x1="-66.04" y1="22.86" x2="-66.04" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="22.86" x2="-66.04" y2="22.86" width="0.1524" layer="91"/>
+<junction x="-66.04" y="22.86"/>
 </segment>
 <segment>
 <pinref part="J9" gate="G$1" pin="1"/>
