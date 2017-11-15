@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -10224,21 +10224,21 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <rectangle x1="-0.15" y1="0.05" x2="0.15" y2="0.1" layer="51"/>
 <rectangle x1="-0.15" y1="-0.1" x2="0.15" y2="-0.05" layer="51"/>
 </package>
-<package name="R0402" urn="urn:adsk.eagle:footprint:23043/3" library_version="3">
-<description>&lt;b&gt;Chip RESISTOR 0402 EIA (1005 Metric)&lt;/b&gt;</description>
+<package name="R0402" urn="urn:adsk.eagle:footprint:23043/1" library_version="2">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
 <wire x1="-0.245" y1="0.224" x2="0.245" y2="0.224" width="0.1524" layer="51"/>
 <wire x1="0.245" y1="-0.224" x2="-0.245" y2="-0.224" width="0.1524" layer="51"/>
-<wire x1="-1" y1="0.483" x2="1" y2="0.483" width="0.0508" layer="39"/>
-<wire x1="1" y1="0.483" x2="1" y2="-0.483" width="0.0508" layer="39"/>
-<wire x1="1" y1="-0.483" x2="-1" y2="-0.483" width="0.0508" layer="39"/>
-<wire x1="-1" y1="-0.483" x2="-1" y2="0.483" width="0.0508" layer="39"/>
-<smd name="1" x="-0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
-<smd name="2" x="0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
+<wire x1="-1.473" y1="0.483" x2="1.473" y2="0.483" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.483" x2="1.473" y2="-0.483" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.483" x2="-1.473" y2="-0.483" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.483" x2="-1.473" y2="0.483" width="0.0508" layer="39"/>
+<smd name="1" x="-0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
+<smd name="2" x="0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
 <text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.35" x2="0.1999" y2="0.35" layer="35"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
 </package>
 <package name="PRL1632" urn="urn:adsk.eagle:footprint:23118/1" library_version="3">
 <description>&lt;b&gt;PRL1632 are realized as 1W for 3.2 × 1.6mm(1206)&lt;/b&gt;&lt;p&gt;
@@ -10880,8 +10880,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </package3d>
 <package3d name="R01005" urn="urn:adsk.eagle:package:23613/1" type="box" library_version="2">
 </package3d>
-<package3d name="R0402" urn="urn:adsk.eagle:package:23547/2" type="box" library_version="3">
-<description>Chip RESISTOR 0402 EIA (1005 Metric)</description>
+<package3d name="R0402" urn="urn:adsk.eagle:package:23547/1" type="box" library_version="2">
+<description>RESISTOR</description>
 </package3d>
 <package3d name="PRL1632" urn="urn:adsk.eagle:package:23612/1" type="box" library_version="3">
 <description>PRL1632 are realized as 1W for 3.2 × 1.6mm(1206)
@@ -11882,7 +11882,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="R-US_" urn="urn:adsk.eagle:component:23792/15" prefix="R" uservalue="yes" library_version="3">
+<deviceset name="R-US_" urn="urn:adsk.eagle:component:23792/14" prefix="R" uservalue="yes" library_version="2">
 <description>&lt;B&gt;RESISTOR&lt;/B&gt;, American symbol</description>
 <gates>
 <gate name="G$1" symbol="R-US" x="0" y="0"/>
@@ -11894,12 +11894,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:23547/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:23547/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R0603" package="R0603">
@@ -11911,9 +11909,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23555/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R0805" package="R0805">
@@ -11925,9 +11921,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23553/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R0805W" package="R0805W">
@@ -11939,9 +11933,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23537/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1206" package="R1206">
@@ -11953,9 +11945,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23540/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1206W" package="R1206W">
@@ -11967,9 +11957,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23539/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1210" package="R1210">
@@ -11981,9 +11969,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23554/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1210W" package="R1210W">
@@ -11995,9 +11981,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23541/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2010" package="R2010">
@@ -12009,9 +11993,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23551/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2010W" package="R2010W">
@@ -12023,9 +12005,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23542/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2012" package="R2012">
@@ -12037,9 +12017,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23543/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2012W" package="R2012W">
@@ -12051,9 +12029,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23544/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2512" package="R2512">
@@ -12065,9 +12041,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23545/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2512W" package="R2512W">
@@ -12079,9 +12053,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23565/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R3216" package="R3216">
@@ -12093,9 +12065,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23557/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R3216W" package="R3216W">
@@ -12107,9 +12077,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23548/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R3225" package="R3225">
@@ -12121,9 +12089,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23549/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R3225W" package="R3225W">
@@ -12135,9 +12101,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23550/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R5025" package="R5025">
@@ -12149,9 +12113,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23552/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R5025W" package="R5025W">
@@ -12163,9 +12125,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23558/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R6332" package="R6332">
@@ -12177,9 +12137,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23559/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R6332W" package="R6332W">
@@ -12191,9 +12149,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23560/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M0805" package="M0805">
@@ -12205,9 +12161,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23556/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M1206" package="M1206">
@@ -12219,9 +12173,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23566/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M1406" package="M1406">
@@ -12233,9 +12185,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23569/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M2012" package="M2012">
@@ -12247,9 +12197,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23561/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M2309" package="M2309">
@@ -12261,9 +12209,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23562/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M3216" package="M3216">
@@ -12275,9 +12221,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23563/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M3516" package="M3516">
@@ -12289,9 +12233,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23573/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M5923" package="M5923">
@@ -12303,9 +12245,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23564/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0204/5" package="0204/5">
@@ -12317,9 +12257,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23488/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0204/7" package="0204/7">
@@ -12331,9 +12269,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23498/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/10" package="0207/10">
@@ -12345,9 +12281,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23491/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/12" package="0207/12">
@@ -12359,9 +12293,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23489/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/15" package="0207/15">
@@ -12373,9 +12305,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23492/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/2V" package="0207/2V">
@@ -12387,9 +12317,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23490/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/5V" package="0207/5V">
@@ -12401,9 +12329,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23502/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/7" package="0207/7">
@@ -12415,9 +12341,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23493/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0309/10" package="0309/10">
@@ -12429,9 +12353,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23567/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0309/12" package="0309/12">
@@ -12443,9 +12365,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23571/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0411/12" package="0411/12">
@@ -12457,9 +12377,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23578/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0411/15" package="0411/15">
@@ -12471,9 +12389,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23568/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0411/3V" package="0411V">
@@ -12485,9 +12401,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23570/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0414/15" package="0414/15">
@@ -12499,9 +12413,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23579/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0414/5V" package="0414V">
@@ -12513,9 +12425,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23574/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0617/17" package="0617/17">
@@ -12527,9 +12437,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23575/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0617/22" package="0617/22">
@@ -12541,9 +12449,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23577/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0617/5V" package="0617V">
@@ -12555,9 +12461,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23576/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0922/22" package="0922/22">
@@ -12569,9 +12473,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23580/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0613/5V" package="P0613V">
@@ -12583,9 +12485,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23582/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0613/15" package="P0613/15">
@@ -12597,9 +12497,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23581/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0817/22" package="P0817/22">
@@ -12611,9 +12509,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23583/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0817/7V" package="P0817V">
@@ -12625,9 +12521,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23608/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="V234/12" package="V234/12">
@@ -12639,9 +12533,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23592/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="V235/17" package="V235/17">
@@ -12653,9 +12545,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23586/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="V526-0" package="V526-0">
@@ -12667,9 +12557,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23590/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0102AX" package="MINI_MELF-0102AX">
@@ -12681,9 +12569,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23594/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0922V" package="0922V">
@@ -12695,9 +12581,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23589/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0102R" package="MINI_MELF-0102R">
@@ -12709,9 +12593,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23591/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0102W" package="MINI_MELF-0102W">
@@ -12723,9 +12605,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23588/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0204R" package="MINI_MELF-0204R">
@@ -12737,9 +12617,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23587/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0204W" package="MINI_MELF-0204W">
@@ -12751,9 +12629,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23584/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0207R" package="MINI_MELF-0207R">
@@ -12765,9 +12641,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23585/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0207W" package="MINI_MELF-0207W">
@@ -12779,9 +12653,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23597/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="RDH/15" package="RDH/15">
@@ -12793,9 +12665,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23595/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0204/2V" package="0204V">
@@ -12807,9 +12677,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23495/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0309/V" package="0309V">
@@ -12821,9 +12689,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23572/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R0201" package="R0201">
@@ -12835,9 +12701,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23593/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VMTA55" package="VMTA55">
@@ -12849,9 +12713,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23600/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VMTB60" package="VMTB60">
@@ -12863,9 +12725,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23607/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA52" package="VTA52">
@@ -12877,9 +12737,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23596/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA53" package="VTA53">
@@ -12891,9 +12749,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23603/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA54" package="VTA54">
@@ -12905,9 +12761,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23598/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA55" package="VTA55">
@@ -12919,9 +12773,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23606/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA56" package="VTA56">
@@ -12933,9 +12785,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23599/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R4527" package="R4527">
@@ -12947,9 +12797,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23615/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC0001" package="WSC0001">
@@ -12961,9 +12809,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23601/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC0002" package="WSC0002">
@@ -12975,9 +12821,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23605/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC01/2" package="WSC01/2">
@@ -12989,9 +12833,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23602/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC2515" package="WSC2515">
@@ -13003,9 +12845,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23604/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC4527" package="WSC4527">
@@ -13017,9 +12857,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23611/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC6927" package="WSC6927">
@@ -13031,9 +12869,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23610/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1218" package="R1218">
@@ -13045,9 +12881,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23614/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="1812X7R" package="1812X7R">
@@ -13059,9 +12893,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23609/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="01005" package="R01005">
@@ -13073,20 +12905,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23613/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
-<spice>
-<pinmapping spiceprefix="R">
-<pinmap gate="G$1" pin="2" pinorder="2"/>
-<pinmap gate="G$1" pin="1" pinorder="1"/>
-</pinmapping>
-</spice>
 </deviceset>
-<deviceset name="R-EU_" urn="urn:adsk.eagle:component:23791/14" prefix="R" uservalue="yes" library_version="3">
+<deviceset name="R-EU_" urn="urn:adsk.eagle:component:23791/12" prefix="R" uservalue="yes" library_version="2">
 <description>&lt;B&gt;RESISTOR&lt;/B&gt;, European symbol</description>
 <gates>
 <gate name="G$1" symbol="R-EU" x="0" y="0"/>
@@ -13098,12 +12922,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:23547/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:23547/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R0603" package="R0603">
@@ -13115,9 +12937,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23555/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R0805" package="R0805">
@@ -13129,9 +12949,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23553/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R0805W" package="R0805W">
@@ -13143,9 +12961,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23537/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1206" package="R1206">
@@ -13157,9 +12973,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23540/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1206W" package="R1206W">
@@ -13171,9 +12985,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23539/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1210" package="R1210">
@@ -13185,9 +12997,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23554/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1210W" package="R1210W">
@@ -13199,9 +13009,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23541/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2010" package="R2010">
@@ -13213,9 +13021,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23551/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2010W" package="R2010W">
@@ -13227,9 +13033,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23542/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2012" package="R2012">
@@ -13241,9 +13045,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23543/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2012W" package="R2012W">
@@ -13255,9 +13057,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23544/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2512" package="R2512">
@@ -13269,9 +13069,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23545/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R2512W" package="R2512W">
@@ -13283,9 +13081,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23565/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R3216" package="R3216">
@@ -13297,9 +13093,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23557/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R3216W" package="R3216W">
@@ -13311,9 +13105,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23548/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R3225" package="R3225">
@@ -13325,9 +13117,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23549/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R3225W" package="R3225W">
@@ -13339,9 +13129,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23550/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R5025" package="R5025">
@@ -13353,9 +13141,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23552/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R5025W" package="R5025W">
@@ -13367,9 +13153,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23558/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R6332" package="R6332">
@@ -13381,9 +13165,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23559/2"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R6332W" package="R6332W">
@@ -13395,9 +13177,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23560/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M0805" package="M0805">
@@ -13409,9 +13189,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23556/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M1206" package="M1206">
@@ -13423,9 +13201,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23566/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M1406" package="M1406">
@@ -13437,9 +13213,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23569/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M2012" package="M2012">
@@ -13451,9 +13225,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23561/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M2309" package="M2309">
@@ -13465,9 +13237,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23562/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M3216" package="M3216">
@@ -13479,9 +13249,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23563/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M3516" package="M3516">
@@ -13493,9 +13261,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23573/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="M5923" package="M5923">
@@ -13507,9 +13273,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23564/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0204/5" package="0204/5">
@@ -13521,9 +13285,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23488/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0204/7" package="0204/7">
@@ -13535,9 +13297,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23498/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0204/2V" package="0204V">
@@ -13549,9 +13309,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23495/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/10" package="0207/10">
@@ -13563,9 +13321,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23491/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/12" package="0207/12">
@@ -13577,9 +13333,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23489/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/15" package="0207/15">
@@ -13591,9 +13345,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23492/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/2V" package="0207/2V">
@@ -13605,9 +13357,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23490/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/5V" package="0207/5V">
@@ -13619,9 +13369,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23502/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0207/7" package="0207/7">
@@ -13633,9 +13381,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23493/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0309/10" package="0309/10">
@@ -13647,9 +13393,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23567/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0309/12" package="0309/12">
@@ -13661,9 +13405,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23571/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0309/V" package="0309V">
@@ -13675,9 +13417,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23572/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0411/12" package="0411/12">
@@ -13689,9 +13429,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23578/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0411/15" package="0411/15">
@@ -13703,9 +13441,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23568/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0411/3V" package="0411V">
@@ -13717,9 +13453,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23570/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0414/15" package="0414/15">
@@ -13731,9 +13465,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23579/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0414/5V" package="0414V">
@@ -13745,9 +13477,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23574/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0617/17" package="0617/17">
@@ -13759,9 +13489,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23575/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0617/22" package="0617/22">
@@ -13773,9 +13501,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23577/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0617/5V" package="0617V">
@@ -13787,9 +13513,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23576/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0922/22" package="0922/22">
@@ -13801,9 +13525,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23580/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0613/5V" package="P0613V">
@@ -13815,9 +13537,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23582/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0613/15" package="P0613/15">
@@ -13829,9 +13549,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23581/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0817/22" package="P0817/22">
@@ -13843,9 +13561,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23583/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0817/7V" package="P0817V">
@@ -13857,9 +13573,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23608/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="V234/12" package="V234/12">
@@ -13871,9 +13585,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23592/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="V235/17" package="V235/17">
@@ -13885,9 +13597,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23586/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="V526-0" package="V526-0">
@@ -13899,9 +13609,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23590/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0102R" package="MINI_MELF-0102R">
@@ -13913,9 +13621,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23591/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0102W" package="MINI_MELF-0102W">
@@ -13927,9 +13633,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23588/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0204R" package="MINI_MELF-0204R">
@@ -13941,9 +13645,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23587/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0204W" package="MINI_MELF-0204W">
@@ -13955,9 +13657,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23584/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0207R" package="MINI_MELF-0207R">
@@ -13969,9 +13669,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23585/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0207W" package="MINI_MELF-0207W">
@@ -13983,9 +13681,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23597/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="0922V" package="0922V">
@@ -13997,9 +13693,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23589/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="RDH/15" package="RDH/15">
@@ -14011,9 +13705,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23595/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="MELF0102AX" package="MINI_MELF-0102AX">
@@ -14025,9 +13717,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23594/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R0201" package="R0201">
@@ -14039,9 +13729,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23593/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA52" package="VTA52">
@@ -14053,9 +13741,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23596/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA53" package="VTA53">
@@ -14067,9 +13753,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23603/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA54" package="VTA54">
@@ -14081,9 +13765,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23598/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA55" package="VTA55">
@@ -14095,9 +13777,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23606/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VTA56" package="VTA56">
@@ -14109,9 +13789,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23599/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VMTA55" package="VMTA55">
@@ -14123,9 +13801,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23600/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="VMTB60" package="VMTB60">
@@ -14137,9 +13813,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23607/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R4527" package="R4527">
@@ -14151,9 +13825,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23615/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC0001" package="WSC0001">
@@ -14165,9 +13837,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23601/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC0002" package="WSC0002">
@@ -14179,9 +13849,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23605/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC01/2" package="WSC01/2">
@@ -14193,9 +13861,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23602/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC2515" package="WSC2515">
@@ -14207,9 +13873,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23604/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC4527" package="WSC4527">
@@ -14221,9 +13885,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23611/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="WSC6927" package="WSC6927">
@@ -14235,9 +13897,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23610/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="R1218" package="R1218">
@@ -14249,9 +13909,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23614/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="1812X7R" package="1812X7R">
@@ -14263,9 +13921,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23609/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="PRL1632" package="PRL1632">
@@ -14277,9 +13933,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23612/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="01005" package="R01005">
@@ -14291,18 +13945,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23613/1"/>
 </package3dinstances>
 <technologies>
-<technology name="">
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
-<spice>
-<pinmapping spiceprefix="R">
-<pinmap gate="G$1" pin="2" pinorder="2"/>
-<pinmap gate="G$1" pin="1" pinorder="1"/>
-</pinmapping>
-</spice>
 </deviceset>
 </devicesets>
 </library>
@@ -18931,6 +18577,928 @@ Example Datasheet</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="testpad" urn="urn:adsk.eagle:library:385">
+<description>&lt;b&gt;Test Pins/Pads&lt;/b&gt;&lt;p&gt;
+Cream on SMD OFF.&lt;br&gt;
+new: Attribute TP_SIGNAL_NAME&lt;br&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="B1,27" urn="urn:adsk.eagle:footprint:27900/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<wire x1="-0.635" y1="0" x2="0.635" y2="0" width="0.0024" layer="37"/>
+<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.0024" layer="37"/>
+<smd name="TP" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
+<text x="-0.635" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-0.635" y="-0.762" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-0.635" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="B2,54" urn="urn:adsk.eagle:footprint:27901/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<wire x1="-0.635" y1="0" x2="0.635" y2="0" width="0.0024" layer="37"/>
+<wire x1="0" y1="-0.635" x2="0" y2="0.635" width="0.0024" layer="37"/>
+<circle x="0" y="0" radius="0.635" width="0.254" layer="37"/>
+<smd name="TP" x="0" y="0" dx="2.54" dy="2.54" layer="1" roundness="100" cream="no"/>
+<text x="-1.27" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.27" y="-1.397" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="-3.175" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="P1-13" urn="urn:adsk.eagle:footprint:27902/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<circle x="0" y="0" radius="0.762" width="0.1524" layer="51"/>
+<pad name="TP" x="0" y="0" drill="1.3208" diameter="2.159" shape="octagon"/>
+<text x="-1.016" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
+</package>
+<package name="P1-13Y" urn="urn:adsk.eagle:footprint:27903/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<circle x="0" y="0" radius="0.762" width="0.1524" layer="51"/>
+<pad name="TP" x="0" y="0" drill="1.3208" diameter="1.905" shape="long" rot="R90"/>
+<text x="-0.889" y="2.159" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="-3.81" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
+</package>
+<package name="P1-17" urn="urn:adsk.eagle:footprint:27904/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<circle x="0" y="0" radius="0.8128" width="0.1524" layer="51"/>
+<pad name="TP" x="0" y="0" drill="1.7018" diameter="2.54" shape="octagon"/>
+<text x="-1.143" y="1.397" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="-3.175" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
+</package>
+<package name="P1-17Y" urn="urn:adsk.eagle:footprint:27905/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<circle x="0" y="0" radius="0.8128" width="0.1524" layer="51"/>
+<pad name="TP" x="0" y="0" drill="1.7018" diameter="2.1208" shape="long" rot="R90"/>
+<text x="-1.143" y="2.286" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="-3.81" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
+</package>
+<package name="P1-20" urn="urn:adsk.eagle:footprint:27906/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<circle x="0" y="0" radius="1.016" width="0.1524" layer="51"/>
+<pad name="TP" x="0" y="0" drill="2.0066" diameter="3.1496" shape="octagon"/>
+<text x="-1.524" y="1.778" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="-3.175" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
+</package>
+<package name="P1-20Y" urn="urn:adsk.eagle:footprint:27907/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<circle x="0" y="0" radius="1.016" width="0.1524" layer="51"/>
+<pad name="TP" x="0" y="0" drill="2.0066" diameter="2.54" shape="long" rot="R90"/>
+<text x="-1.27" y="2.794" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="-1.27" y="-4.445" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<rectangle x1="-0.3302" y1="-0.3302" x2="0.3302" y2="0.3302" layer="51"/>
+</package>
+<package name="TP06R" urn="urn:adsk.eagle:footprint:27908/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.6" dy="0.6" layer="1" roundness="100" cream="no"/>
+<text x="-0.3" y="0.4001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.254" y="-0.381" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP06SQ" urn="urn:adsk.eagle:footprint:27909/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.5996" dy="0.5996" layer="1" cream="no"/>
+<text x="-0.3" y="0.4001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.254" y="-0.381" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP07R" urn="urn:adsk.eagle:footprint:27910/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.7" dy="0.7" layer="1" roundness="100" cream="no"/>
+<text x="-0.3" y="0.4001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.254" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP07SQ" urn="urn:adsk.eagle:footprint:27911/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.7" dy="0.7" layer="1" cream="no"/>
+<text x="-0.3" y="0.4001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.381" y="-0.381" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP08R" urn="urn:adsk.eagle:footprint:27912/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.8" dy="0.8" layer="1" roundness="100" cream="no"/>
+<text x="-0.3" y="0.4001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.381" y="-0.381" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP08SQ" urn="urn:adsk.eagle:footprint:27913/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.8" dy="0.8" layer="1" cream="no"/>
+<text x="-0.3" y="0.4001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.381" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP09R" urn="urn:adsk.eagle:footprint:27914/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.9" dy="0.9" layer="1" roundness="100" cream="no"/>
+<text x="-0.4501" y="0.5001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.381" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP09SQ" urn="urn:adsk.eagle:footprint:27915/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="0.8998" dy="0.8998" layer="1" cream="no"/>
+<text x="-0.4501" y="0.5001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.381" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP10R" urn="urn:adsk.eagle:footprint:27916/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+<text x="-0.5001" y="0.5499" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.381" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP10SQ" urn="urn:adsk.eagle:footprint:27917/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1" dy="1" layer="1" cream="no"/>
+<text x="-0.5001" y="0.5499" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.508" y="-0.635" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP11R" urn="urn:adsk.eagle:footprint:27918/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.1" dy="1.1" layer="1" roundness="100" cream="no"/>
+<text x="-0.5499" y="0.5999" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.508" y="-0.508" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP11SQ" urn="urn:adsk.eagle:footprint:27919/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.1" dy="1.1" layer="1" cream="no"/>
+<text x="-0.5499" y="0.5999" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.508" y="-0.635" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP12SQ" urn="urn:adsk.eagle:footprint:27920/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.1998" dy="1.1998" layer="1" cream="no"/>
+<text x="-0.5999" y="0.65" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.508" y="-0.635" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP12R" urn="urn:adsk.eagle:footprint:27921/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.2" dy="1.2" layer="1" roundness="100" cream="no"/>
+<text x="-0.5999" y="0.65" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.508" y="-0.635" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP13R" urn="urn:adsk.eagle:footprint:27922/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.3" dy="1.3" layer="1" roundness="100" cream="no"/>
+<text x="-0.65" y="0.7" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.508" y="-0.635" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP14R" urn="urn:adsk.eagle:footprint:27923/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.4" dy="1.4" layer="1" roundness="100" cream="no"/>
+<text x="-0.7" y="0.7501" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.508" y="-0.762" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP15R" urn="urn:adsk.eagle:footprint:27924/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
+<text x="-0.7501" y="0.8001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-0.762" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP16R" urn="urn:adsk.eagle:footprint:27925/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.6" dy="1.6" layer="1" roundness="100" cream="no"/>
+<text x="-0.8001" y="0.8499" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-0.762" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP17R" urn="urn:adsk.eagle:footprint:27926/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.7" dy="1.7" layer="1" roundness="100" cream="no"/>
+<text x="-0.8499" y="0.8999" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-0.889" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP18R" urn="urn:adsk.eagle:footprint:27927/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.8" dy="1.8" layer="1" roundness="100" cream="no"/>
+<text x="-0.8999" y="0.95" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.762" y="-0.889" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP19R" urn="urn:adsk.eagle:footprint:27928/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.9" dy="1.9" layer="1" roundness="100" cream="no"/>
+<text x="-0.95" y="1" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.762" y="-0.889" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP20R" urn="urn:adsk.eagle:footprint:27929/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="2" dy="2" layer="1" roundness="100" cream="no"/>
+<text x="-1" y="1.05" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.762" y="-1.016" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP13SQ" urn="urn:adsk.eagle:footprint:27930/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.3" dy="1.3" layer="1" cream="no"/>
+<text x="-0.65" y="0.7" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-0.762" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP14SQ" urn="urn:adsk.eagle:footprint:27931/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.4" dy="1.4" layer="1" cream="no"/>
+<text x="-0.7" y="0.7501" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-0.762" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP15SQ" urn="urn:adsk.eagle:footprint:27932/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.5" dy="1.5" layer="1" cream="no"/>
+<text x="-0.7501" y="0.8001" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.762" y="-0.889" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP16SQ" urn="urn:adsk.eagle:footprint:27933/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.5996" dy="1.5996" layer="1" cream="no"/>
+<text x="-0.8001" y="0.8499" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.762" y="-0.889" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP17SQ" urn="urn:adsk.eagle:footprint:27934/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.7" dy="1.7" layer="1" cream="no"/>
+<text x="-0.8499" y="0.8999" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.762" y="-0.889" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP18SQ" urn="urn:adsk.eagle:footprint:27935/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.8" dy="1.8" layer="1" cream="no"/>
+<text x="-0.8999" y="0.95" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.889" y="-1.016" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP19SQ" urn="urn:adsk.eagle:footprint:27936/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.8998" dy="1.8998" layer="1" cream="no"/>
+<text x="-0.95" y="1" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.889" y="-1.016" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP20SQ" urn="urn:adsk.eagle:footprint:27937/1" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="2" dy="2" layer="1" cream="no"/>
+<text x="-1" y="1.05" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.016" y="-1.143" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="B1,27" urn="urn:adsk.eagle:package:27944/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="B2,54" urn="urn:adsk.eagle:package:27948/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="P1-13" urn="urn:adsk.eagle:package:27946/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="P1-13Y" urn="urn:adsk.eagle:package:27947/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="P1-17" urn="urn:adsk.eagle:package:27949/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="P1-17Y" urn="urn:adsk.eagle:package:27953/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="P1-20" urn="urn:adsk.eagle:package:27950/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="P1-20Y" urn="urn:adsk.eagle:package:27951/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP06R" urn="urn:adsk.eagle:package:27954/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP06SQ" urn="urn:adsk.eagle:package:27952/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP07R" urn="urn:adsk.eagle:package:27970/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP07SQ" urn="urn:adsk.eagle:package:27955/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP08R" urn="urn:adsk.eagle:package:27956/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP08SQ" urn="urn:adsk.eagle:package:27960/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP09R" urn="urn:adsk.eagle:package:27958/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP09SQ" urn="urn:adsk.eagle:package:27957/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP10R" urn="urn:adsk.eagle:package:27959/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP10SQ" urn="urn:adsk.eagle:package:27962/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP11R" urn="urn:adsk.eagle:package:27961/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP11SQ" urn="urn:adsk.eagle:package:27965/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP12SQ" urn="urn:adsk.eagle:package:27964/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP12R" urn="urn:adsk.eagle:package:27963/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP13R" urn="urn:adsk.eagle:package:27967/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP14R" urn="urn:adsk.eagle:package:27966/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP15R" urn="urn:adsk.eagle:package:27968/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP16R" urn="urn:adsk.eagle:package:27969/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP17R" urn="urn:adsk.eagle:package:27971/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP18R" urn="urn:adsk.eagle:package:27981/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP19R" urn="urn:adsk.eagle:package:27972/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP20R" urn="urn:adsk.eagle:package:27973/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP13SQ" urn="urn:adsk.eagle:package:27974/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP14SQ" urn="urn:adsk.eagle:package:27984/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP15SQ" urn="urn:adsk.eagle:package:27975/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP16SQ" urn="urn:adsk.eagle:package:27976/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP17SQ" urn="urn:adsk.eagle:package:27977/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP18SQ" urn="urn:adsk.eagle:package:27979/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP19SQ" urn="urn:adsk.eagle:package:27978/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+<package3d name="TP20SQ" urn="urn:adsk.eagle:package:27980/1" type="box" library_version="1">
+<description>TEST PAD</description>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="TP" urn="urn:adsk.eagle:symbol:27940/1" library_version="1">
+<wire x1="-0.762" y1="-0.762" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-0.762" x2="0" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.524" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<text x="-1.27" y="1.27" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.27" y="-1.27" size="1.778" layer="97">&gt;TP_SIGNAL_NAME</text>
+<pin name="TP" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TP" urn="urn:adsk.eagle:component:27992/1" prefix="TP" library_version="1">
+<description>&lt;b&gt;Test pad&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="TP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="B1,27" package="B1,27">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27944/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="B2,54" package="B2,54">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27948/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="PAD1-13" package="P1-13">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27946/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="PAD1-13Y" package="P1-13Y">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27947/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="PAD1-17" package="P1-17">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27949/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="PAD1-17Y" package="P1-17Y">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27953/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="PAD1-20" package="P1-20">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27950/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="PAD1-20Y" package="P1-20Y">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27951/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP06R" package="TP06R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27954/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP06SQ" package="TP06SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27952/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP07R" package="TP07R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27970/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP07SQ" package="TP07SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27955/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP08R" package="TP08R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27956/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP08SQ" package="TP08SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27960/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP09R" package="TP09R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27958/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP09SQ" package="TP09SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27957/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP10R" package="TP10R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27959/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP10SQ" package="TP10SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27962/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP11R" package="TP11R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27961/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP11SQ" package="TP11SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27965/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP12SQ" package="TP12SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27964/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP12R" package="TP12R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27963/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP13R" package="TP13R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27967/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP14R" package="TP14R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27966/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP15R" package="TP15R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27968/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP16R" package="TP16R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27969/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP17R" package="TP17R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27971/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP18R" package="TP18R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27981/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP19R" package="TP19R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27972/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP20R" package="TP20R">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27973/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP13SQ" package="TP13SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27974/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP14SQ" package="TP14SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27984/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP15SQ" package="TP15SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27975/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP16SQ" package="TP16SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27976/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP17SQ" package="TP17SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27977/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP18SQ" package="TP18SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27979/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP19SQ" package="TP19SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27978/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="TP20SQ" package="TP20SQ">
+<connects>
+<connect gate="G$1" pin="TP" pad="TP"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27980/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -18968,19 +19536,12 @@ Example Datasheet</description>
 <part name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="47pF"/>
 <part name="C6" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="47pF"/>
 <part name="C7" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="47pF"/>
-<part name="R7" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="470k"/>
-<part name="T2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="0"/>
-<part name="R9" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="150k"/>
 <part name="T3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="0"/>
 <part name="T1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="0"/>
 <part name="SUPPLY25" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY26" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="470k"/>
-<part name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="150k"/>
 <part name="SUPPLY27" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY28" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="470k"/>
-<part name="R12" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="150k"/>
 <part name="C8" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1uF"/>
 <part name="C9" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1uF"/>
 <part name="C10" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1uF"/>
@@ -18996,8 +19557,6 @@ Example Datasheet</description>
 <part name="SUPPLY35" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY36" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY37" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R13" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="470k"/>
-<part name="R14" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value="150k"/>
 <part name="SUPPLY39" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="U$1" library="AAT3693" deviceset="AAT3693" device=""/>
 <part name="JP1" library="SparkFun-Retired" library_urn="urn:adsk.eagle:library:533" deviceset="JUMPER-2" device="PTH"/>
@@ -19040,7 +19599,7 @@ Example Datasheet</description>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device=""/>
 <part name="C18" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0402" package3d_urn="urn:adsk.eagle:package:26136/1" value="22pF"/>
 <part name="C19" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0402" package3d_urn="urn:adsk.eagle:package:26136/1" value="22pF"/>
-<part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/2" value="1M"/>
+<part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/1" value="1M"/>
 <part name="Y1" library="SparkFun-Clocks" library_urn="urn:adsk.eagle:library:511" deviceset="CRYSTAL-16MHZ" device="PTH-HC49US" package3d_urn="urn:adsk.eagle:package:37515/1" value="20MHz"/>
 <part name="J5" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
 <part name="J6" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
@@ -19055,6 +19614,24 @@ Example Datasheet</description>
 <part name="C14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/1" value="10u"/>
 <part name="J10" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="AUDIO_JACK_TRRS" device="SMD_RA" package3d_urn="urn:adsk.eagle:package:38268/1"/>
 <part name="SUPPLY45" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/1"/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="470k"/>
+<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="150k"/>
+<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="470k"/>
+<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="470k"/>
+<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="150k"/>
+<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="150k"/>
+<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="150k"/>
+<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/1" value="470k"/>
+<part name="TP1" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-17" package3d_urn="urn:adsk.eagle:package:27949/1"/>
+<part name="TP2" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-17" package3d_urn="urn:adsk.eagle:package:27949/1"/>
+<part name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="PAD1-17" package3d_urn="urn:adsk.eagle:package:27949/1"/>
+<part name="C17" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10UF-POLAR" device="-RADIAL-2.5MM-KIT-25V-20%" package3d_urn="urn:adsk.eagle:package:37424/1" value="10uF"/>
+<part name="C20" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10UF-POLAR" device="-RADIAL-2.5MM-KIT-25V-20%" package3d_urn="urn:adsk.eagle:package:37424/1" value="10uF"/>
+<part name="C21" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1uF"/>
+<part name="C22" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1uF"/>
+<part name="C23" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1uF"/>
+<part name="C24" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="47PF" device="-0603-50V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="1uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -19082,7 +19659,7 @@ Example Datasheet</description>
 </plain>
 <instances>
 <instance part="SUPPLY1" gate="GND" x="-86.36" y="-33.02"/>
-<instance part="SUPPLY2" gate="1" x="-66.04" y="30.48"/>
+<instance part="SUPPLY2" gate="1" x="-68.58" y="30.48"/>
 <instance part="J1" gate="G$1" x="146.05" y="7.62"/>
 <instance part="FRAME1" gate="G$2" x="68.58" y="-96.52"/>
 <instance part="J3" gate="G$1" x="-27.94" y="-55.88"/>
@@ -19116,9 +19693,6 @@ Example Datasheet</description>
 <instance part="C5" gate="G$1" x="-63.5" y="127"/>
 <instance part="C6" gate="G$1" x="-63.5" y="96.52"/>
 <instance part="C7" gate="G$1" x="-63.5" y="71.12"/>
-<instance part="R7" gate="G$1" x="-45.72" y="160.02"/>
-<instance part="T2" gate="G$1" x="-45.72" y="152.4"/>
-<instance part="R9" gate="G$1" x="-33.02" y="152.4" rot="R90"/>
 <instance part="T3" gate="G$1" x="-25.4" y="152.4" rot="R90"/>
 <instance part="T1" gate="G$1" x="-53.34" y="154.94" smashed="yes" rot="R90">
 <attribute name="NAME" x="-54.864" y="154.94" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -19128,18 +19702,8 @@ Example Datasheet</description>
 <attribute name="VALUE" x="-42.545" y="149.225" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY26" gate="GND" x="-22.86" y="147.32" rot="R90"/>
-<instance part="R8" gate="G$1" x="-53.34" y="132.08" smashed="yes">
-<attribute name="NAME" x="-53.34" y="125.984" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="-53.34" y="130.556" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
-<instance part="R10" gate="G$1" x="-43.18" y="127" rot="R90"/>
 <instance part="SUPPLY27" gate="GND" x="-43.18" y="116.84"/>
 <instance part="SUPPLY28" gate="GND" x="-63.5" y="116.84"/>
-<instance part="R11" gate="G$1" x="-53.34" y="101.6" smashed="yes">
-<attribute name="NAME" x="-53.34" y="95.504" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="-53.34" y="100.076" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
-<instance part="R12" gate="G$1" x="-40.64" y="96.52" rot="R90"/>
 <instance part="C8" gate="G$1" x="-78.74" y="127"/>
 <instance part="C9" gate="G$1" x="-78.74" y="154.94"/>
 <instance part="C10" gate="G$1" x="-78.74" y="96.52"/>
@@ -19155,11 +19719,6 @@ Example Datasheet</description>
 <instance part="SUPPLY35" gate="GND" x="-63.5" y="88.9"/>
 <instance part="SUPPLY36" gate="GND" x="-40.64" y="86.36"/>
 <instance part="SUPPLY37" gate="GND" x="-63.5" y="63.5"/>
-<instance part="R13" gate="G$1" x="-53.34" y="76.2" smashed="yes">
-<attribute name="NAME" x="-53.34" y="70.104" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="-53.34" y="74.676" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
-<instance part="R14" gate="G$1" x="-35.56" y="71.12" rot="R90"/>
 <instance part="SUPPLY39" gate="GND" x="-35.56" y="60.96"/>
 <instance part="SUPPLY42" gate="1" x="109.22" y="96.52"/>
 <instance part="U1" gate="U$1" x="-25.4" y="-2.54"/>
@@ -19183,6 +19742,24 @@ Example Datasheet</description>
 <instance part="SUPPLY44" gate="GND" x="45.72" y="-12.7"/>
 <instance part="J10" gate="G$1" x="93.98" y="101.6" rot="R270"/>
 <instance part="SUPPLY45" gate="GND" x="99.06" y="83.82"/>
+<instance part="R17" gate="G$1" x="-50.8" y="172.72"/>
+<instance part="R7" gate="G$1" x="-45.72" y="160.02"/>
+<instance part="R8" gate="G$1" x="-33.02" y="152.4" rot="R90"/>
+<instance part="R9" gate="G$1" x="-53.34" y="132.08" rot="R180"/>
+<instance part="R10" gate="G$1" x="-53.34" y="101.6" rot="R180"/>
+<instance part="R11" gate="G$1" x="-43.18" y="127" rot="R270"/>
+<instance part="R12" gate="G$1" x="-40.64" y="96.52" rot="R270"/>
+<instance part="R13" gate="G$1" x="-35.56" y="71.12" rot="R270"/>
+<instance part="R14" gate="G$1" x="-53.34" y="76.2" rot="R180"/>
+<instance part="TP1" gate="G$1" x="-71.12" y="20.32" rot="R90"/>
+<instance part="TP2" gate="G$1" x="96.52" y="48.26" rot="R270"/>
+<instance part="TP3" gate="G$1" x="68.58" y="55.88"/>
+<instance part="C17" gate="G$1" x="111.76" y="53.34" rot="R180"/>
+<instance part="C20" gate="G$1" x="96.52" y="71.12" rot="R180"/>
+<instance part="C21" gate="G$1" x="-91.44" y="35.56" rot="R90"/>
+<instance part="C22" gate="G$1" x="-63.5" y="25.4" rot="R90"/>
+<instance part="C23" gate="G$1" x="-55.88" y="20.32" rot="R90"/>
+<instance part="C24" gate="G$1" x="-63.5" y="15.24" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -19212,17 +19789,16 @@ Example Datasheet</description>
 </segment>
 <segment>
 <pinref part="SUPPLY2" gate="1" pin="V+"/>
-<pinref part="U1" gate="U$1" pin="VCC@4"/>
-<wire x1="-50.8" y1="20.32" x2="-66.04" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="U1" gate="U$1" pin="VCC@6"/>
-<wire x1="-50.8" y1="17.78" x2="-66.04" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-66.04" y1="17.78" x2="-66.04" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-66.04" y1="27.94" x2="-66.04" y2="22.86" width="0.1524" layer="91"/>
-<junction x="-66.04" y="20.32"/>
-<pinref part="U1" gate="U$1" pin="AVCC"/>
-<wire x1="-66.04" y1="22.86" x2="-66.04" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="22.86" x2="-66.04" y2="22.86" width="0.1524" layer="91"/>
-<junction x="-66.04" y="22.86"/>
+<wire x1="-68.58" y1="15.24" x2="-68.58" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="27.94" x2="-68.58" y2="25.4" width="0.1524" layer="91"/>
+<junction x="-68.58" y="20.32"/>
+<pinref part="TP1" gate="G$1" pin="TP"/>
+<pinref part="C22" gate="G$1" pin="1"/>
+<wire x1="-68.58" y1="25.4" x2="-68.58" y2="20.32" width="0.1524" layer="91"/>
+<junction x="-68.58" y="25.4"/>
+<pinref part="C24" gate="G$1" pin="1"/>
+<pinref part="C23" gate="G$1" pin="1"/>
+<wire x1="-60.96" y1="20.32" x2="-68.58" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J9" gate="G$1" pin="1"/>
@@ -19311,13 +19887,13 @@ Example Datasheet</description>
 <pinref part="T3" gate="G$1" pin="1"/>
 <junction x="-25.4" y="147.32"/>
 <pinref part="SUPPLY26" gate="GND" pin="GND"/>
-<pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="147.32" x2="-25.4" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="R8" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="R10" gate="G$1" pin="1"/>
 <pinref part="SUPPLY27" gate="GND" pin="GND"/>
 <wire x1="-43.18" y1="119.38" x2="-43.18" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="R11" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
@@ -19355,9 +19931,9 @@ Example Datasheet</description>
 <wire x1="-63.5" y1="91.44" x2="-63.5" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R12" gate="G$1" pin="1"/>
 <pinref part="SUPPLY36" gate="GND" pin="GND"/>
 <wire x1="-40.64" y1="88.9" x2="-40.64" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="2"/>
@@ -19365,9 +19941,9 @@ Example Datasheet</description>
 <wire x1="-63.5" y1="68.58" x2="-63.5" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="-35.56" y1="66.04" x2="-35.56" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="SUPPLY39" gate="GND" pin="GND"/>
+<pinref part="R13" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="SUPPLY34" gate="GND" pin="GND"/>
@@ -19431,12 +20007,13 @@ Example Datasheet</description>
 <segment>
 <pinref part="U4" gate="G1" pin="OUT"/>
 <wire x1="93.98" y1="45.72" x2="83.82" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="J10" gate="G$1" pin="TIP"/>
-<pinref part="J10" gate="G$1" pin="RING1"/>
-<wire x1="91.44" y1="96.52" x2="93.98" y2="96.52" width="0.1524" layer="91"/>
-<junction x="93.98" y="96.52"/>
-<wire x1="93.98" y1="96.52" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="96.52" x2="93.98" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="TP2" gate="G$1" pin="TP"/>
+<wire x1="93.98" y1="48.26" x2="93.98" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="48.26" x2="93.98" y2="60.96" width="0.1524" layer="91"/>
+<junction x="93.98" y="48.26"/>
+<wire x1="93.98" y1="60.96" x2="96.52" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="C20" gate="G$1" pin="+"/>
+<wire x1="96.52" y1="60.96" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -19464,9 +20041,12 @@ Example Datasheet</description>
 <net name="UPCONVERTERINPUT" class="0">
 <segment>
 <pinref part="U4" gate="G1" pin="V+"/>
-<wire x1="73.66" y1="53.34" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="53.34" x2="68.58" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="BOOSTIN" gate="G$1" pin="1"/>
+<wire x1="68.58" y1="53.34" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="55.88" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="TP3" gate="G$1" pin="TP"/>
+<junction x="68.58" y="53.34"/>
 </segment>
 </net>
 <net name="AUDIOINPUT" class="0">
@@ -19528,24 +20108,19 @@ Example Datasheet</description>
 <wire x1="-78.74" y1="160.02" x2="-63.5" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="-63.5" y1="160.02" x2="-53.34" y2="160.02" width="0.1524" layer="91"/>
 <junction x="-63.5" y="160.02"/>
-<pinref part="T2" gate="G$1" pin="1"/>
-<pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="-50.8" y1="152.4" x2="-50.8" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="160.02" x2="-50.8" y2="160.02" width="0.1524" layer="91"/>
 <junction x="-53.34" y="160.02"/>
-<junction x="-50.8" y="160.02"/>
 <pinref part="C9" gate="G$1" pin="1"/>
 <junction x="-78.74" y="160.02"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<junction x="-50.8" y="160.02"/>
 </segment>
 </net>
 <net name="SENSOR1OUT" class="0">
 <segment>
-<pinref part="R7" gate="G$1" pin="2"/>
-<pinref part="T2" gate="G$1" pin="2"/>
 <wire x1="-40.64" y1="160.02" x2="-40.64" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="160.02" x2="-33.02" y2="160.02" width="0.1524" layer="91"/>
-<junction x="-40.64" y="160.02"/>
-<pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="-33.02" y1="157.48" x2="-33.02" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="160.02" x2="-25.4" y2="160.02" width="0.1524" layer="91"/>
 <junction x="-33.02" y="160.02"/>
@@ -19558,6 +20133,9 @@ Example Datasheet</description>
 <junction x="-25.4" y="160.02"/>
 <pinref part="U1" gate="U$1" pin="PC0(ADC0)"/>
 <wire x1="0" y1="27.94" x2="-2.54" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<junction x="-40.64" y="160.02"/>
+<pinref part="R8" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="SENSOR2IN" class="0">
@@ -19565,12 +20143,12 @@ Example Datasheet</description>
 <pinref part="D2" gate="G$1" pin="C"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="-81.28" y1="132.08" x2="-78.74" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="-78.74" y1="132.08" x2="-63.5" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="-63.5" y1="132.08" x2="-58.42" y2="132.08" width="0.1524" layer="91"/>
 <junction x="-63.5" y="132.08"/>
 <pinref part="C8" gate="G$1" pin="1"/>
 <junction x="-78.74" y="132.08"/>
+<pinref part="R9" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="SENSOR3IN" class="0">
@@ -19581,9 +20159,9 @@ Example Datasheet</description>
 <pinref part="C10" gate="G$1" pin="1"/>
 <wire x1="-78.74" y1="101.6" x2="-63.5" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-78.74" y="101.6"/>
-<pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="101.6" x2="-58.42" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-63.5" y="101.6"/>
+<pinref part="R10" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="SENSOR4IN" class="0">
@@ -19594,42 +20172,40 @@ Example Datasheet</description>
 <pinref part="C11" gate="G$1" pin="1"/>
 <wire x1="-76.2" y1="76.2" x2="-63.5" y2="76.2" width="0.1524" layer="91"/>
 <junction x="-76.2" y="76.2"/>
-<pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="76.2" x2="-58.42" y2="76.2" width="0.1524" layer="91"/>
 <junction x="-63.5" y="76.2"/>
+<pinref part="R14" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="SENSOR2OUT" class="0">
 <segment>
-<pinref part="R8" gate="G$1" pin="2"/>
-<pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="-48.26" y1="132.08" x2="-43.18" y2="132.08" width="0.1524" layer="91"/>
 <label x="-38.1" y="134.62" size="1.778" layer="95"/>
 <wire x1="5.08" y1="25.4" x2="5.08" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="132.08" x2="-43.18" y2="132.08" width="0.1524" layer="91"/>
-<junction x="-43.18" y="132.08"/>
 <pinref part="U1" gate="U$1" pin="PC1(ADC1)"/>
+<wire x1="-43.18" y1="132.08" x2="-48.26" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="25.4" x2="-2.54" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<junction x="-43.18" y="132.08"/>
 </segment>
 </net>
 <net name="SENSOR3OUT" class="0">
 <segment>
-<pinref part="R11" gate="G$1" pin="2"/>
-<pinref part="R12" gate="G$1" pin="2"/>
-<wire x1="-48.26" y1="101.6" x2="-40.64" y2="101.6" width="0.1524" layer="91"/>
 <label x="-40.64" y="104.14" size="1.778" layer="95"/>
 <wire x1="7.62" y1="101.6" x2="-40.64" y2="101.6" width="0.1524" layer="91"/>
-<junction x="-40.64" y="101.6"/>
+<wire x1="-40.64" y1="101.6" x2="-48.26" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="101.6" x2="7.62" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="U1" gate="U$1" pin="PC2(ADC2)"/>
 <wire x1="7.62" y1="22.86" x2="-2.54" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<junction x="-40.64" y="101.6"/>
 </segment>
 </net>
 <net name="SENSOR4OUT" class="0">
 <segment>
-<pinref part="R14" gate="G$1" pin="2"/>
 <wire x1="-35.56" y1="76.2" x2="-38.1" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="-48.26" y1="76.2" x2="-35.56" y2="76.2" width="0.1524" layer="91"/>
 <label x="-30.48" y="76.2" size="1.778" layer="95"/>
 <wire x1="10.16" y1="76.2" x2="-35.56" y2="76.2" width="0.1524" layer="91"/>
@@ -19637,6 +20213,8 @@ Example Datasheet</description>
 <wire x1="10.16" y1="76.2" x2="10.16" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="U1" gate="U$1" pin="PC3(ADC3)"/>
 <wire x1="10.16" y1="20.32" x2="-2.54" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<pinref part="R14" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -19863,6 +20441,39 @@ Example Datasheet</description>
 <wire x1="38.1" y1="0" x2="38.1" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="U1" gate="U$1" pin="PD7(AIN1)"/>
 <wire x1="38.1" y1="-12.7" x2="-2.54" y2="-12.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="J10" gate="G$1" pin="RING1"/>
+<pinref part="J10" gate="G$1" pin="TIP"/>
+<wire x1="91.44" y1="96.52" x2="93.98" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="C20" gate="G$1" pin="-"/>
+<wire x1="93.98" y1="96.52" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="76.2" x2="93.98" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="76.2" x2="93.98" y2="96.52" width="0.1524" layer="91"/>
+<junction x="93.98" y="96.52"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U1" gate="U$1" pin="VCC@4"/>
+<pinref part="C23" gate="G$1" pin="2"/>
+<wire x1="-53.34" y1="20.32" x2="-50.8" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U1" gate="U$1" pin="AVCC"/>
+<pinref part="C22" gate="G$1" pin="2"/>
+<wire x1="-50.8" y1="22.86" x2="-60.96" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U1" gate="U$1" pin="VCC@6"/>
+<pinref part="C24" gate="G$1" pin="2"/>
+<wire x1="-50.8" y1="17.78" x2="-60.96" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -20164,12 +20775,6 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
-</note>
-<note version="8.4" severity="warning">
-Since Version 8.4, EAGLE supports properties for SPICE simulation. 
-Probes in schematics and SPICE mapping objects found in parts and library devices
-will not be understood with this version. Update EAGLE to the latest version
-for full support of SPICE simulation. 
 </note>
 </compatibility>
 </eagle>
