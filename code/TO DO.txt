@@ -1,0 +1,12 @@
+To do:
+
+- Implement SD Card interface / import an existing library
+
+- Implement wavetable
+  - Create tables
+  - Create interrupt routine / PWM timing
+  - Interpolate tables
+  
+  Done:
+  
+  - Implement polling loop
