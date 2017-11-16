@@ -24,11 +24,13 @@
 #include <util/delay.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include "wavetable.h"
 
 // Function prototypes
 uint8_t read_ADC(uint8_t ADC_Channel);
 void adc_init();
 void io_init();
+void tc_init();
 
 
 // Global variables
@@ -49,6 +51,7 @@ int main(void)
 	// Initial setup functions
 	adc_init();
 	io_init();
+	tc_init();
 	
 	//PORTD |= 0x0F;
 	
@@ -93,6 +96,21 @@ int main(void)
 	
 }
 
+// PWM interrupt routine
+ISR(TIMER1_OVF_vect)
+{
+	// TCNT1 is constantly compared with OCR1x
+	// The OCF1x flag will be set upon a match
+	// If OCIE1x is enabled, an interrupt will be generated as well
+	// The OCF1x flag will be cleared when the interrupt is serviced
+	
+	// Set PWM duty cycle by altering OCR1AL
+	
+	// GTCCR |= 0x8001; // This holds the clock prescaler in reset, halting the counter
+	
+	
+}
+
 // Read ADC, blocking read
 uint8_t read_ADC(uint8_t ADC_Channel)
 {
@@ -106,6 +124,20 @@ uint8_t read_ADC(uint8_t ADC_Channel)
 	return ADCH;
 }
 
+// Initialize Timer/Counter 1
+void tc_init(void)
+{
+	// The timer/counter should be in Fast PWM mode,
+	// with a PWM frequency of ~20KHz.
+	// T/C will set OC1A to 1 at 0x00, count to OCR1A,
+	// set OC1A low, count to 0xFF, reset to 0x00.
+	
+	// Set COM1A output behavior, set fast PWM mode
+	TCCR1A |= (1 << COM1A1) | (1 < WGM11);
+	
+	// Set fast PWM mode, set counter clock to sys_clk / 8
+	TCCR1B |= (1 << WGM12) | (1 << CS11);
+}
 
 // Initialize ADC
 void adc_init(void)
@@ -133,5 +165,7 @@ void io_init(void)
 	// Set Pins 30-32, 1 (Port D 0-3) as output for LEDs
 	DDRD |= 0x0F;
 	
+	// Set Pin 13 (Port B 1) as output for PWM output
+	DDRB |= 0x02;
 }
 
