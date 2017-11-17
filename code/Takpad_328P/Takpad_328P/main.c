@@ -1,6 +1,6 @@
 /*
  * Takpad_328P.c
- * Version 0.0.2
+ * Version 0.0.3
  * Last updated: 11/14/2017
  * Author:  ECE411 Group 11, Fall 2017
  */
@@ -12,7 +12,6 @@
  *
  *  Implement wave tables
  *   Create tables
- *   Set up interrupt routine
  *   
  *  Set up SD Card interface
  *   Probably just import a library
@@ -31,11 +30,28 @@ uint8_t read_ADC(uint8_t ADC_Channel);
 void adc_init();
 void io_init();
 void tc_init();
+void init_notes();
+void start_note(int);
+void stop_note(int);
 
+enum note_state {
+		OFF		= 0,
+		ATTACK	= 1,
+		DECAY	= 2,
+		SUSTAIN = 3,
+		RELEASE = 4,
+		DONE	= 5
+	};
 
 // Global variables
-// static uint8_t note_state[4];
-static uint8_t note_velocity[4];
+struct note {
+		enum note_state state;
+		uint8_t velocity;
+		uint8_t phase;
+		uint16_t step;
+} note[4];
+
+uint8_t note_count = 0;
 
 int main(void)
 {
@@ -52,6 +68,7 @@ int main(void)
 	adc_init();
 	io_init();
 	tc_init();
+	init_notes();
 	
 	//PORTD |= 0x0F;
 	
@@ -80,9 +97,10 @@ int main(void)
 			}
 			else
 			{
-				if (prev_reading[i] > reading[i])
+				if ((prev_reading[i] > reading[i]) & trigger[i])
 				{
-					note_velocity[i] = peak_reading[i];
+					note[i].velocity = peak_reading[i];
+					start_note(i);
 				}
 				trigger[i] = 0;
 			}
@@ -90,12 +108,28 @@ int main(void)
 		
 		//_delay_ms(50);
 	}
-	
-
-
-	
 }
 
+// Set up note values to begin playing
+void start_note(int index)
+{
+	note[index].state = ATTACK;
+	if(note_count < 4) 
+		note_count++;
+	else
+		note_count = 4;
+}
+
+// Reset note to known state
+void stop_note(int index)
+{
+	note[index].velocity = 0;
+	note[index].phase = 0;
+	if(note_count > 0)
+		note_count--;
+	else
+		note_count = 0;
+}
 // PWM interrupt routine
 ISR(TIMER1_OVF_vect)
 {
@@ -103,12 +137,23 @@ ISR(TIMER1_OVF_vect)
 	// The OCF1x flag will be set upon a match
 	// If OCIE1x is enabled, an interrupt will be generated as well
 	// The OCF1x flag will be cleared when the interrupt is serviced
-	
 	// Set PWM duty cycle by altering OCR1AL
 	
+	// Sum the wave table values of  all four notes (inactive notes should be 0)
+	int duty_cycle = (sine[note[0].step++] + sine[note[1].step++] + sine[note[2].step++] + sine[note[3].step++]);
+	// Divide by number of active notes
+	switch (note_count)
+	{
+		case 0:
+		case 1: break;
+		case 2: duty_cycle = (duty_cycle >> 1); break;
+		case 3: duty_cycle = (duty_cycle >> 2) + (duty_cycle >> 4); break;
+		case 4: duty_cycle = (duty_cycle >> 2); break;
+	}
+	// Update duty cycle register
+	OCR1AL = duty_cycle;
+	
 	// GTCCR |= 0x8001; // This holds the clock prescaler in reset, halting the counter
-	
-	
 }
 
 // Read ADC, blocking read
@@ -169,3 +214,15 @@ void io_init(void)
 	DDRB |= 0x02;
 }
 
+void init_notes()
+{
+	int i;
+	
+	for(i = 0; i < 4; i++)
+	{
+		note[i].phase = 0;
+		note[i].state = OFF;
+		note[i].step = (4 * i) + 1;
+		note[i].velocity = 0;
+	}
+}
