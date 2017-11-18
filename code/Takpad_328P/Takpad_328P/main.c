@@ -1,7 +1,7 @@
 /*
  * Takpad_328P.c
- * Version 0.0.3
- * Last updated: 11/14/2017
+ * Version 0.0.4
+ * Last updated: 11/17/2017
  * Author:  ECE411 Group 11, Fall 2017
  */
 
@@ -9,6 +9,8 @@
  * Fuses: 0xFD, 0xD6, 0xFF
  * 
  * TO DO:
+ *
+ *  Make the sounds not terrible
  *
  *  Implement wave tables
  *   Create tables
@@ -48,7 +50,8 @@ struct note {
 		enum note_state state;
 		uint8_t velocity;
 		uint8_t phase;
-		uint16_t step;
+		uint8_t step;
+		uint16_t duration;
 } note[4];
 
 uint8_t note_count = 0;
@@ -70,9 +73,6 @@ int main(void)
 	tc_init();
 	init_notes();
 	
-	//PORTD |= 0x0F;
-	
-	
 	// Polling loop
 	while (1)
 	{
@@ -80,10 +80,17 @@ int main(void)
 		for	(i = 0; i < 4; i++)
 		{
 			// Turn on LED when sensor reading is > threshold
-			if (trigger[i])
+			if(note[i].state == ATTACK)
+			//if (trigger[i])
 				PORTD |= (1 << i);
 			else
 				PORTD &= ~(1 << i);
+
+			// If note is on, and duration complete, turn off
+			if((note[i].duration == 0) & (note[i].state == ATTACK))
+				stop_note(i);
+			
+
 			
 			// update sensor reading
 			prev_reading[i] = reading[i];
@@ -101,6 +108,7 @@ int main(void)
 				{
 					note[i].velocity = peak_reading[i];
 					start_note(i);
+					peak_reading[i] = 0;
 				}
 				trigger[i] = 0;
 			}
@@ -114,6 +122,7 @@ int main(void)
 void start_note(int index)
 {
 	note[index].state = ATTACK;
+	note[index].duration = (note[index].step * 24);
 	if(note_count < 4) 
 		note_count++;
 	else
@@ -123,6 +132,7 @@ void start_note(int index)
 // Reset note to known state
 void stop_note(int index)
 {
+	note[index].state = OFF;
 	note[index].velocity = 0;
 	note[index].phase = 0;
 	if(note_count > 0)
@@ -140,7 +150,7 @@ ISR(TIMER1_OVF_vect)
 	// Set PWM duty cycle by altering OCR1AL
 	
 	// Sum the wave table values of  all four notes (inactive notes should be 0)
-	int duty_cycle = (sine[note[0].step++] + sine[note[1].step++] + sine[note[2].step++] + sine[note[3].step++]);
+	int duty_cycle = (sine[note[0].phase] + saw[note[1].phase] + saw[note[2].phase] + saw[note[3].phase]);
 	// Divide by number of active notes
 	switch (note_count)
 	{
@@ -152,6 +162,15 @@ ISR(TIMER1_OVF_vect)
 	}
 	// Update duty cycle register
 	OCR1AL = duty_cycle;
+	
+	for(int i = 0; i < 4; i++)
+	{
+		if((note[i].state != OFF) & (note[i].state != DONE))
+			note[i].phase += note[i].step;
+		// Update note duration if it's at the end of the wavetable
+		if((note[i].phase == 0xFF) & (note[i].duration > 0))
+			note[i].duration -= 1;
+	}
 	
 	// GTCCR |= 0x8001; // This holds the clock prescaler in reset, halting the counter
 }
@@ -178,10 +197,17 @@ void tc_init(void)
 	// set OC1A low, count to 0xFF, reset to 0x00.
 	
 	// Set COM1A output behavior, set fast PWM mode
-	TCCR1A |= (1 << COM1A1) | (1 < WGM11);
+	TCCR1A |= (1 << COM1A1) | (1 << WGM10);
 	
 	// Set fast PWM mode, set counter clock to sys_clk / 8
-	TCCR1B |= (1 << WGM12) | (1 << CS11);
+	TCCR1B |= (1 << WGM12) | (1 << CS10);
+	
+	// Enable timer overflow interrupts
+	TIMSK1 |= 1;
+	// Globally enable interrupts
+	sei();
+	
+	OCR1A = 0x0F;
 }
 
 // Initialize ADC
@@ -210,8 +236,8 @@ void io_init(void)
 	// Set Pins 30-32, 1 (Port D 0-3) as output for LEDs
 	DDRD |= 0x0F;
 	
-	// Set Pin 13 (Port B 1) as output for PWM output
-	DDRB |= 0x02;
+	// Set Pin 13 (PortB1 / OC1A) as output for PWM output
+	DDRB |= (1 << 1);
 }
 
 void init_notes()
@@ -224,5 +250,6 @@ void init_notes()
 		note[i].state = OFF;
 		note[i].step = (4 * i) + 1;
 		note[i].velocity = 0;
+		note[i].duration = 0;
 	}
 }
