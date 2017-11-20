@@ -12,14 +12,27 @@
  *
  *  Make the sounds not terrible
  *
+ *  Fix ADSR behavior (Start note -> sustain/countdown -> release/alter)
+ *
  *  Implement wave tables
- *   Create tables
+ *   Create better tables!
  *   
  *  Set up SD Card interface
  *   Probably just import a library
  *  
  *  Make this not one giant file ffs
  */ 
+
+/*
+ * Notes on frequencies:
+ *  At 16MHz, the TC1 PWM is 62.5kHz
+ *  With a 256 element sine wave table, size 1 steps give ~244 Hz
+ *
+ *  For an LFO, TC2 with a pre-scaler of 128 gives a TC clock of 125kHz
+ *  If the counter counted to 64 before resetting, it would overflow at ~1953Hz
+ *  Using a 256 element wave table, it would have a frequency of ~8Hz
+ *
+ */
 
 #define F_CPU 16000000UL // 16 MHz
 #include <util/delay.h>
@@ -53,6 +66,8 @@ struct note {
 		uint8_t step;
 		uint16_t duration;
 } note[4];
+
+uint8_t LFO_phase = 0;
 
 uint8_t note_count = 0;
 
@@ -122,7 +137,7 @@ int main(void)
 void start_note(int index)
 {
 	note[index].state = ATTACK;
-	note[index].duration = (note[index].step * 24);
+	note[index].duration = note[index].velocity << 8;
 	if(note_count < 4) 
 		note_count++;
 	else
@@ -149,8 +164,15 @@ ISR(TIMER1_OVF_vect)
 	// The OCF1x flag will be cleared when the interrupt is serviced
 	// Set PWM duty cycle by altering OCR1AL
 	
+	// Increment LFO phase on compare match
+	if(TIFR2 & OCF2A)
+	{
+		TIFR2 |= (1 << OCF2A);
+		LFO_phase++;
+	}
+	
 	// Sum the wave table values of  all four notes (inactive notes should be 0)
-	int duty_cycle = (sine[note[0].phase] + saw[note[1].phase] + saw[note[2].phase] + saw[note[3].phase]);
+	int duty_cycle = (saw[note[0].phase] + sine[note[1].phase] + sine[note[2].phase] + sine[note[3].phase]);
 	// Divide by number of active notes
 	switch (note_count)
 	{
@@ -163,12 +185,13 @@ ISR(TIMER1_OVF_vect)
 	// Update duty cycle register
 	OCR1AL = duty_cycle;
 	
+	// Increment phase accumulator by step + LFO
 	for(int i = 0; i < 4; i++)
 	{
 		if((note[i].state != OFF) & (note[i].state != DONE))
-			note[i].phase += note[i].step;
+			note[i].phase += note[i].step + (sine[LFO_phase] >> 6) /*+ (note[i].duration & 0xFF)*/;
 		// Update note duration if it's at the end of the wavetable
-		if((note[i].phase == 0xFF) & (note[i].duration > 0))
+		if(note[i].duration > 0)
 			note[i].duration -= 1;
 	}
 	
@@ -196,12 +219,16 @@ void tc_init(void)
 	// T/C will set OC1A to 1 at 0x00, count to OCR1A,
 	// set OC1A low, count to 0xFF, reset to 0x00.
 	
+	// Set up TC2 for CTC mode, 128 pre-scalar, 64 count
+	TCCR2A |= (1 << WGM21);
+	TCCR2B |= (1 << CS22) | (1 << CS20);
+	OCR2A = 64;
+	
+	// Set up TC1
 	// Set COM1A output behavior, set fast PWM mode
 	TCCR1A |= (1 << COM1A1) | (1 << WGM10);
-	
 	// Set fast PWM mode, set counter clock to sys_clk / 8
 	TCCR1B |= (1 << WGM12) | (1 << CS10);
-	
 	// Enable timer overflow interrupts
 	TIMSK1 |= 1;
 	// Globally enable interrupts
@@ -248,7 +275,7 @@ void init_notes()
 	{
 		note[i].phase = 0;
 		note[i].state = OFF;
-		note[i].step = (4 * i) + 1;
+		note[i].step = pow(2, i);
 		note[i].velocity = 0;
 		note[i].duration = 0;
 	}
