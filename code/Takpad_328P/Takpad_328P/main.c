@@ -1,7 +1,7 @@
 /*
  * Takpad_328P.c
- * Version 0.0.4
- * Last updated: 11/17/2017
+ * Version 0.0.5
+ * Last updated: 11/20/2017
  * Author:  ECE411 Group 11, Fall 2017
  */
 
@@ -12,15 +12,20 @@
  *
  *  Make the sounds not terrible
  *
- *  Fix ADSR behavior (Start note -> sustain/countdown -> release/alter)
+ *  Add ADSR envelope effect
  *
  *  Implement wave tables
  *   Create better tables!
+ *   Multiple tables to fade between
+ *
+ *  Implement LFO pitch modulation
+ *   Maybe alter TC1 top value slightly?
  *   
+ *  Waveshaping!
+ *
  *  Set up SD Card interface
  *   Probably just import a library
  *  
- *  Make this not one giant file ffs
  */ 
 
 /*
@@ -39,36 +44,12 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "wavetable.h"
-
-// Function prototypes
-uint8_t read_ADC(uint8_t ADC_Channel);
-void adc_init();
-void io_init();
-void tc_init();
-void init_notes();
-void start_note(int);
-void stop_note(int);
-
-enum note_state {
-		OFF		= 0,
-		ATTACK	= 1,
-		DECAY	= 2,
-		SUSTAIN = 3,
-		RELEASE = 4,
-		DONE	= 5
-	};
+#include "synth.h"
 
 // Global variables
-struct note {
-		enum note_state state;
-		uint8_t velocity;
-		uint8_t phase;
-		uint8_t step;
-		uint16_t duration;
-} note[4];
-
+struct note_t note[4];
+struct envelope env;
 uint8_t LFO_phase = 0;
-
 uint8_t note_count = 0;
 
 int main(void)
@@ -93,19 +74,16 @@ int main(void)
 	{
 		
 		for	(i = 0; i < 4; i++)
-		{
+		{			
 			// Turn on LED when sensor reading is > threshold
-			if(note[i].state == ATTACK)
-			//if (trigger[i])
+			if (trigger[i])
 				PORTD |= (1 << i);
 			else
 				PORTD &= ~(1 << i);
-
-			// If note is on, and duration complete, turn off
-			if((note[i].duration == 0) & (note[i].state == ATTACK))
-				stop_note(i);
 			
-
+			// If note is on, and duration complete, turn off
+			if((note[i].duration == 0) & (note[i].state != OFF))
+				update_note(&note[i]);
 			
 			// update sensor reading
 			prev_reading[i] = reading[i];
@@ -122,39 +100,74 @@ int main(void)
 				if ((prev_reading[i] > reading[i]) & trigger[i])
 				{
 					note[i].velocity = peak_reading[i];
-					start_note(i);
+					start_note(&note[i]);
 					peak_reading[i] = 0;
 				}
 				trigger[i] = 0;
 			}
 		}
-		
-		//_delay_ms(50);
 	}
 }
 
-// Set up note values to begin playing
-void start_note(int index)
+// Set up note values to begin playing or restart
+void start_note(struct note_t* note)
 {
-	note[index].state = ATTACK;
-	note[index].duration = note[index].velocity << 8;
-	if(note_count < 4) 
-		note_count++;
+	if(note->state == OFF)
+	{
+		note->duration = env.attack;
+		if(note_count < 4) 
+			note_count++;
+		else
+			note_count = 4;
+	}
 	else
-		note_count = 4;
+	{
+		if(note->state == DECAY)
+			note->duration = env.attack * (note->duration / env.decay);
+		else if(note->state == SUSTAIN)
+			note->duration = env.attack * (note->duration / env.sustain);
+		else
+			note->duration = env.attack * (note->duration / env.release);
+	}
+	note->state = ATTACK;
 }
 
 // Reset note to known state
-void stop_note(int index)
+void stop_note(struct note_t* note)
 {
-	note[index].state = OFF;
-	note[index].velocity = 0;
-	note[index].phase = 0;
+	note->state = OFF;
+	note->velocity = 0;
+	note->phase = 0;
 	if(note_count > 0)
 		note_count--;
 	else
 		note_count = 0;
 }
+
+// Update note state
+void update_note(struct note_t* note)
+{
+	if(note->state == ATTACK)
+	{
+		note->state = DECAY;
+		note->duration = env.decay;
+	}
+	else if(note->state == DECAY)
+	{
+		note->state = SUSTAIN;
+		note->duration = env.sustain;
+	}
+	else if(note->state == SUSTAIN)
+	{
+		note->state = RELEASE;
+		note->duration = env.release;
+	}
+	else if(note->state == RELEASE)
+	{
+		stop_note(note);
+	}
+}
+
 // PWM interrupt routine
 ISR(TIMER1_OVF_vect)
 {
@@ -172,7 +185,11 @@ ISR(TIMER1_OVF_vect)
 	}
 	
 	// Sum the wave table values of  all four notes (inactive notes should be 0)
-	int duty_cycle = (saw[note[0].phase] + sine[note[1].phase] + sine[note[2].phase] + sine[note[3].phase]);
+	int duty_cycle = 
+		(((sine[note[0].phase] + saw[note[0].phase >> 1]) >> 1)
+		+((sine[note[1].phase] + saw[note[1].phase >> 1]) >> 1)
+		+((sine[note[2].phase] + saw[note[2].phase >> 1]) >> 1)
+		+((sine[note[3].phase] + saw[note[3].phase >> 1]) >> 1));
 	// Divide by number of active notes
 	switch (note_count)
 	{
@@ -182,15 +199,16 @@ ISR(TIMER1_OVF_vect)
 		case 3: duty_cycle = (duty_cycle >> 2) + (duty_cycle >> 4); break;
 		case 4: duty_cycle = (duty_cycle >> 2); break;
 	}
+	
 	// Update duty cycle register
 	OCR1AL = duty_cycle;
 	
-	// Increment phase accumulator by step + LFO
 	for(int i = 0; i < 4; i++)
 	{
-		if((note[i].state != OFF) & (note[i].state != DONE))
-			note[i].phase += note[i].step + (sine[LFO_phase] >> 6) /*+ (note[i].duration & 0xFF)*/;
-		// Update note duration if it's at the end of the wavetable
+		// Increment phase accumulator
+		if(note[i].state != OFF)
+			note[i].phase += note[i].step;
+		// Decrement note duration
 		if(note[i].duration > 0)
 			note[i].duration -= 1;
 	}
@@ -271,6 +289,7 @@ void init_notes()
 {
 	int i;
 	
+	// Initialize note structs
 	for(i = 0; i < 4; i++)
 	{
 		note[i].phase = 0;
@@ -279,4 +298,10 @@ void init_notes()
 		note[i].velocity = 0;
 		note[i].duration = 0;
 	}
+	
+	// Initialize envelope values
+	env.attack = 3000;
+	env.decay = 4000;
+	env.sustain = 16000;
+	env.release = 8000;
 }
