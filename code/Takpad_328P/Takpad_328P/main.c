@@ -1,7 +1,7 @@
 /*
  * Takpad_328P.c
- * Version 0.0.5
- * Last updated: 11/20/2017
+ * Version 0.0.6
+ * Last updated: 11/21/2017
  * Author:  ECE411 Group 11, Fall 2017
  */
 
@@ -10,27 +10,26 @@
  * 
  * TO DO:
  *
- *  xChange timer value to make sample rate 44.1kHz
- *	xMake wavetables -128 through 127
+ *  Make larger tables?  512 might not suck
+ *
+ *  Put tables in PROGMEM!
+ *
  *  Add ADSR amplitude modulation
- *  Add LFO frequency modulation
+ *   Create ADSR tables
+ *   Add frequency modulation based on ADSR tables
+ *   Add amplitude modulation based on ADSR tables
  *
- *  Implement wave tables
- *   Create better tables!
- *   Multiple tables to fade between
- *
- *  Implement LFO pitch modulation
- *   Maybe alter TC1 top value slightly?
+ *  Create more complex wave tables
  *   
  *  Waveshaping!
  *
  *  Set up SD Card interface
  *   Probably just import a library
- *  
+ *   Load tables at start?
  */ 
 
 /*
- * Notes on frequencies:
+ * Notes on frequencies:  THIS IS WRONG NOW
  *  At 16MHz, the TC1 PWM is 62.5kHz
  *  With a 256 element sine wave table, size 1 steps give ~244 Hz
  *
@@ -51,7 +50,7 @@
 struct note_t note[4];
 struct envelope env;
 uint8_t LFO_phase = 0;
-uint8_t note_count = 0;
+uint16_t timer_val = 363;
 
 int main(void)
 {
@@ -82,8 +81,8 @@ int main(void)
 			else
 				PORTD &= ~(1 << i);
 			
-			// If note is on, and duration complete, turn off
-			if((note[i].duration == 0) & (note[i].state != OFF))
+			// Move to next phase of envelope
+			if((note[i].env_phase & 0x80) && (note[i].state != OFF))
 				update_note(&note[i]);
 			
 			// update sensor reading
@@ -120,13 +119,13 @@ ISR(TIMER1_OVF_vect)
 	// Set PWM duty cycle by altering OCR1AL
 	
 	// Increment LFO phase on compare match
-	/*
+	
 	if(TIFR2 & OCF2A)
 	{
 		TIFR2 |= (1 << OCF2A);
 		LFO_phase++;
 	}
-	*/
+	ICR1 = timer_val + (sine[LFO_phase] >> 3);
 	
 	// Sum the wave table values of  all four notes (inactive notes should be 0)
 	int duty_cycle = 127 +
@@ -142,10 +141,10 @@ ISR(TIMER1_OVF_vect)
 	{
 		// Increment phase accumulator
 		if(note[i].state != OFF)
-		note[i].phase += note[i].step;
-		// Decrement note duration
-		if(note[i].duration > 0)
-		note[i].duration -= 1;
+		{
+			note[i].phase += note[i].step; // plus envelope freq shift
+			note[i].env_phase += note[i].env_step;
+		}
 	}
 	
 	// GTCCR |= 0x8001; // This holds the clock prescaler in reset, halting the counter
@@ -156,22 +155,18 @@ void start_note(struct note_t* note)
 {
 	if(note->state == OFF)
 	{
-		note->duration = env.attack;
-		if(note_count < 4) 
-			note_count++;
-		else
-			note_count = 4;
+		note->env_phase = 0;
+		note->env_step = env.a_step;
 	}
 	else
 	{
 		if(note->state == DECAY)
-			note->duration = env.attack * (note->duration / env.decay);
-		else if(note->state == SUSTAIN)
-			note->duration = env.attack * (note->duration / env.sustain);
+			note->env_phase = 128 - (note->env_phase & 0x7F);
 		else
-			note->duration = env.attack * (note->duration / env.release);
+			note->env_phase = 0;
 	}
 	note->state = ATTACK;
+	note->env_step = env.a_step; // times some velocity modifier
 }
 
 // Reset note to known state
@@ -180,29 +175,26 @@ void stop_note(struct note_t* note)
 	note->state = OFF;
 	note->velocity = 0;
 	note->phase = 0;
-	if(note_count > 0)
-		note_count--;
-	else
-		note_count = 0;
 }
 
 // Update note state
 void update_note(struct note_t* note)
 {
+	note->env_phase = 0;
 	if(note->state == ATTACK)
 	{
 		note->state = DECAY;
-		note->duration = env.decay;
+		note->env_step = env.d_step; // times some velocity modifier
 	}
 	else if(note->state == DECAY)
 	{
 		note->state = SUSTAIN;
-		note->duration = env.sustain;
+		note->env_step = env.s_step; // times some velocity modifier
 	}
 	else if(note->state == SUSTAIN)
 	{
 		note->state = RELEASE;
-		note->duration = env.release;
+		note->env_step = env.r_step; // times some velocity modifier
 	}
 	else if(note->state == RELEASE)
 	{
@@ -244,7 +236,7 @@ void tc_init(void)
 	// Enable timer overflow interrupts
 	TIMSK1 |= 1;
 	
-	ICR1 = 363;
+	ICR1 = timer_val;
 	OCR1A = 0xFF;
 	
 	// Globally enable interrupts
@@ -290,17 +282,15 @@ void init_notes()
 	{
 		note[i].phase = 0;
 		note[i].state = OFF;
-		note[i].step = pow(2, i);
+		note[i].step = (2 * i) + 1;
 		note[i].velocity = 0;
-		note[i].duration = 0;
+		note[i].env_phase = 0;
+		note[i].env_step = 0;
 	}
 	
 	// Initialize envelope values
-	env.attack = 3000;
-	env.decay = 4000;
-	env.sustain = 16000;
-	env.release = 8000;
-	env.a_step = env.attack / 256;
-	env.d_step = env.decay / 256;
-	env.r_step = env.release / 256;
+	env.a_step = 10;
+	env.d_step = 10;
+	env.s_step = 5;
+	env.r_step = 2;
 }

@@ -7,8 +7,10 @@
 
 enum note_state {
 	OFF = 0,
-	ON = 1,
-	DONE = 2
+	ATTACK = 1,
+	DECAY = 2,
+	SUSTAIN = 3,
+	RELEASE =4
 };
 
 struct note_t {
@@ -18,6 +20,13 @@ struct note_t {
 	uint8_t step;
 	uint16_t env_phase;
 	uint8_t env_step;
+};
+
+struct envelope {
+	uint8_t a_step;
+	uint8_t d_step;
+	uint8_t s_step;
+	uint8_t r_step;
 };
 
 // Function prototypes
