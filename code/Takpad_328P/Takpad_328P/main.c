@@ -10,9 +10,10 @@
  * 
  * TO DO:
  *
- *  Make the sounds not terrible
- *
- *  Add ADSR envelope effect
+ *  xChange timer value to make sample rate 44.1kHz
+ *	xMake wavetables -128 through 127
+ *  Add ADSR amplitude modulation
+ *  Add LFO frequency modulation
  *
  *  Implement wave tables
  *   Create better tables!
@@ -109,6 +110,47 @@ int main(void)
 	}
 }
 
+// PWM interrupt routine
+ISR(TIMER1_OVF_vect)
+{
+	// TCNT1 is constantly compared with OCR1x
+	// The OCF1x flag will be set upon a match
+	// If OCIE1x is enabled, an interrupt will be generated as well
+	// The OCF1x flag will be cleared when the interrupt is serviced
+	// Set PWM duty cycle by altering OCR1AL
+	
+	// Increment LFO phase on compare match
+	/*
+	if(TIFR2 & OCF2A)
+	{
+		TIFR2 |= (1 << OCF2A);
+		LFO_phase++;
+	}
+	*/
+	
+	// Sum the wave table values of  all four notes (inactive notes should be 0)
+	int duty_cycle = 127 +
+	((((sine[note[0].phase] + saw[note[0].phase >> 1]) >> 1)
+	+((sine[note[1].phase] + saw[note[1].phase >> 1]) >> 1)
+	+((sine[note[2].phase] + saw[note[2].phase >> 1]) >> 1)
+	+((sine[note[3].phase] + saw[note[3].phase >> 1]) >> 1)) >> 2);
+	
+	// Update duty cycle register
+	OCR1AL = duty_cycle;
+	
+	for(int i = 0; i < 4; i++)
+	{
+		// Increment phase accumulator
+		if(note[i].state != OFF)
+		note[i].phase += note[i].step;
+		// Decrement note duration
+		if(note[i].duration > 0)
+		note[i].duration -= 1;
+	}
+	
+	// GTCCR |= 0x8001; // This holds the clock prescaler in reset, halting the counter
+}
+
 // Set up note values to begin playing or restart
 void start_note(struct note_t* note)
 {
@@ -168,54 +210,6 @@ void update_note(struct note_t* note)
 	}
 }
 
-// PWM interrupt routine
-ISR(TIMER1_OVF_vect)
-{
-	// TCNT1 is constantly compared with OCR1x
-	// The OCF1x flag will be set upon a match
-	// If OCIE1x is enabled, an interrupt will be generated as well
-	// The OCF1x flag will be cleared when the interrupt is serviced
-	// Set PWM duty cycle by altering OCR1AL
-	
-	// Increment LFO phase on compare match
-	if(TIFR2 & OCF2A)
-	{
-		TIFR2 |= (1 << OCF2A);
-		LFO_phase++;
-	}
-	
-	// Sum the wave table values of  all four notes (inactive notes should be 0)
-	int duty_cycle = 
-		(((sine[note[0].phase] + saw[note[0].phase >> 1]) >> 1)
-		+((sine[note[1].phase] + saw[note[1].phase >> 1]) >> 1)
-		+((sine[note[2].phase] + saw[note[2].phase >> 1]) >> 1)
-		+((sine[note[3].phase] + saw[note[3].phase >> 1]) >> 1));
-	// Divide by number of active notes
-	switch (note_count)
-	{
-		case 0:
-		case 1: break;
-		case 2: duty_cycle = (duty_cycle >> 1); break;
-		case 3: duty_cycle = (duty_cycle >> 2) + (duty_cycle >> 4); break;
-		case 4: duty_cycle = (duty_cycle >> 2); break;
-	}
-	
-	// Update duty cycle register
-	OCR1AL = duty_cycle;
-	
-	for(int i = 0; i < 4; i++)
-	{
-		// Increment phase accumulator
-		if(note[i].state != OFF)
-			note[i].phase += note[i].step;
-		// Decrement note duration
-		if(note[i].duration > 0)
-			note[i].duration -= 1;
-	}
-	
-	// GTCCR |= 0x8001; // This holds the clock prescaler in reset, halting the counter
-}
-
 // Read ADC, blocking read
 uint8_t read_ADC(uint8_t ADC_Channel)
 {
@@ -243,16 +237,18 @@ void tc_init(void)
 	OCR2A = 64;
 	
 	// Set up TC1
-	// Set COM1A output behavior, set fast PWM mode
-	TCCR1A |= (1 << COM1A1) | (1 << WGM10);
-	// Set fast PWM mode, set counter clock to sys_clk / 8
-	TCCR1B |= (1 << WGM12) | (1 << CS10);
+	// Set COM1A output behavior, set fast PWM mode, TOP = ICR1
+	TCCR1A |= (1 << COM1A1) | (1 << WGM11);
+	// Set fast PWM mode, set counter clock to sys_clk
+	TCCR1B |= (1 << WGM13) | (1 << WGM12) | (1 << CS10);
 	// Enable timer overflow interrupts
 	TIMSK1 |= 1;
+	
+	ICR1 = 363;
+	OCR1A = 0xFF;
+	
 	// Globally enable interrupts
 	sei();
-	
-	OCR1A = 0x0F;
 }
 
 // Initialize ADC
@@ -304,4 +300,7 @@ void init_notes()
 	env.decay = 4000;
 	env.sustain = 16000;
 	env.release = 8000;
+	env.a_step = env.attack / 256;
+	env.d_step = env.decay / 256;
+	env.r_step = env.release / 256;
 }

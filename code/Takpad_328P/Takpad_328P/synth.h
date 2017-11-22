@@ -6,11 +6,9 @@
  */
 
 enum note_state {
-	OFF		= 0,
-	ATTACK	= 1,
-	DECAY	= 2,
-	SUSTAIN = 3,
-	RELEASE = 4,
+	OFF = 0,
+	ON = 1,
+	DONE = 2
 };
 
 struct note_t {
@@ -18,16 +16,9 @@ struct note_t {
 	uint8_t velocity;
 	uint8_t phase;
 	uint8_t step;
-	uint16_t duration;
+	uint16_t env_phase;
+	uint8_t env_step;
 };
-
-struct envelope {
-	int attack;
-	int decay;
-	int sustain;
-	int release;
-};
-
 
 // Function prototypes
 uint8_t read_ADC(uint8_t ADC_Channel);
