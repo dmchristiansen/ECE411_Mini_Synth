@@ -14,6 +14,10 @@
  *
  *  Add frequency modulation based on ADSR tables?
  *
+ *  Tune envelope speed (make the slowest slower)
+ *
+ *  Tune notes (which notes should we play?)
+ *
  *  Create more complex wave tables
  *   
  *  Waveshaping!
