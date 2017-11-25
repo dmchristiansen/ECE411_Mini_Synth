@@ -82,7 +82,7 @@ int main(void)
 				PORTD &= ~(1 << i);
 			
 			// Move to next phase of envelope
-			if((note[i].env_phase & 0x80) && (note[i].state != OFF))
+			if((note[i].env_phase & 0x2000) && (note[i].state != OFF))
 				update_note(&note[i]);
 			
 			// update sensor reading
@@ -289,8 +289,8 @@ void init_notes()
 	}
 	
 	// Initialize envelope values
-	env.a_step = 10;
-	env.d_step = 10;
-	env.s_step = 5;
-	env.r_step = 2;
+	env.a_step = 1;
+	env.d_step = 1;
+	env.s_step = 1;
+	env.r_step = 1;
 }
