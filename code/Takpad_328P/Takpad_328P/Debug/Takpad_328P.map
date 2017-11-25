@@ -22,6 +22,14 @@ Discarded input sections
  .bss           0x00000000        0x0 main.o
  .text.stop_note
                 0x00000000        0xa main.o
+ .data.amp_release
+                0x00000000      0x100 main.o
+ .data.amp_sustain
+                0x00000000      0x100 main.o
+ .data.amp_decay
+                0x00000000      0x100 main.o
+ .data.amp_attack
+                0x00000000      0x100 main.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -442,15 +450,15 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xa51
+.debug_info     0x00000000      0xaad
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4      0x45d main.o
+ .debug_info    0x000005f4      0x4b9 main.o
 
-.debug_abbrev   0x00000000      0x813
+.debug_abbrev   0x00000000      0x824
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_abbrev  0x000005a2      0x271 main.o
+ .debug_abbrev  0x000005a2      0x282 main.o
 
 .debug_line     0x00000000      0x54d
  *(.debug_line .debug_line.* .debug_line_end)
@@ -461,11 +469,11 @@ END GROUP
  *(.debug_frame)
  .debug_frame   0x00000000      0x10c main.o
 
-.debug_str      0x00000000      0x46c
+.debug_str      0x00000000      0x499
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x264 main.o
-                                0x2bd (size before relaxing)
+ .debug_str     0x00000208      0x291 main.o
+                                0x2ea (size before relaxing)
 
 .debug_loc      0x00000000      0x7be
  *(.debug_loc)
