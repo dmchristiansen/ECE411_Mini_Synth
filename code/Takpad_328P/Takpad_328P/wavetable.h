@@ -1,6 +1,6 @@
 // wavetable.h
 
-int8_t sine[256] = {
+const int8_t sine[] PROGMEM = {
 0,	//0
 3,	//1
 6,	//2
@@ -259,7 +259,7 @@ int8_t sine[256] = {
 -4,	//255
 };
 
-int8_t saw[256] = {
+const int8_t saw[] PROGMEM = {
 	128,	//0
 	127,	//1
 	126,	//2
@@ -519,7 +519,7 @@ int8_t saw[256] = {
 };
 
 // Table for amplitude envelope attack
-int8_t amp_attack[256] = {
+const int8_t amp_attack[] PROGMEM = {
 	0,2,5,7,10,12,14,16,
 	18,20,23,25,27,28,30,32,
 	34,36,38,39,41,43,44,46,
@@ -555,7 +555,7 @@ int8_t amp_attack[256] = {
 };
 
 // Table for amplitude envelope decay
-int8_t amp_decay[256] = {
+const int8_t amp_decay[] PROGMEM = {
 	126,126,126,127,127,127,127,127,
 	127,127,127,127,126,126,126,126,
 	126,126,126,126,125,125,125,125,
@@ -591,7 +591,7 @@ int8_t amp_decay[256] = {
 };
 
 // Table for amplitude envelope sustain
-uint8_t amp_sustain[256] = {
+const int8_t amp_sustain[] PROGMEM = {
 	100,100,100,100,100,100,100,100,
 	100,100,100,100,100,100,100,100,
 	100,100,100,100,100,100,100,100,
@@ -627,7 +627,7 @@ uint8_t amp_sustain[256] = {
 };
 
 // Table for amplitude envelope release
-int8_t amp_release[256] = {
+const int8_t amp_release[] PROGMEM = {
 	100,98,97,95,94,92,91,90,
 	88,87,86,84,83,82,80,79,
 	78,77,75,74,73,72,71,70,

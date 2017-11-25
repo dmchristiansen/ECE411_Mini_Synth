@@ -12,12 +12,7 @@
  *
  *  Make larger tables?  512 might not suck
  *
- *  Put tables in PROGMEM!
- *
- *  Add ADSR amplitude modulation
- *   Create ADSR tables
- *   Add frequency modulation based on ADSR tables
- *   Add amplitude modulation based on ADSR tables
+ *  Add frequency modulation based on ADSR tables?
  *
  *  Create more complex wave tables
  *   
@@ -43,6 +38,7 @@
 #include <util/delay.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <avr/pgmspace.h>
 #include "wavetable.h"
 #include "synth.h"
 
@@ -128,11 +124,18 @@ ISR(TIMER1_OVF_vect)
 	ICR1 = timer_val + (sine[LFO_phase] >> 3);
 	
 	// Sum the wave table values of  all four notes (inactive notes should be 0)
-	int duty_cycle = 127 +
+	/*int duty_cycle = 127 +
 	((((sine[note[0].phase] + saw[note[0].phase >> 1]) >> 1)
 	+((sine[note[1].phase] + saw[note[1].phase >> 1]) >> 1)
 	+((sine[note[2].phase] + saw[note[2].phase >> 1]) >> 1)
 	+((sine[note[3].phase] + saw[note[3].phase >> 1]) >> 1)) >> 2);
+	*/
+	
+	int duty_cycle = 127 +
+	(((((int8_t)pgm_read_byte(sine + note[0].phase) * (int8_t)pgm_read_byte(note[0].env_table + (note[0].env_phase >> 6))) >> 7)
+	+ (((int8_t)pgm_read_byte(sine + note[1].phase) * (int8_t)pgm_read_byte(note[1].env_table + (note[1].env_phase >> 6))) >> 7)
+	+ (((int8_t)pgm_read_byte(sine + note[2].phase) * (int8_t)pgm_read_byte(note[2].env_table + (note[2].env_phase >> 6))) >> 7)
+	+ (((int8_t)pgm_read_byte(sine + note[3].phase) * (int8_t)pgm_read_byte(note[3].env_table + (note[3].env_phase >> 6))) >> 7)) >> 2);
 	
 	// Update duty cycle register
 	OCR1AL = duty_cycle;
@@ -165,6 +168,7 @@ void start_note(struct note_t* note)
 		else
 			note->env_phase = 0;
 	}
+	note->env_table = (uint16_t)amp_attack;
 	note->state = ATTACK;
 	note->env_step = env.a_step; // times some velocity modifier
 }
@@ -183,16 +187,19 @@ void update_note(struct note_t* note)
 	note->env_phase = 0;
 	if(note->state == ATTACK)
 	{
+		note->env_table = (uint16_t)amp_decay;
 		note->state = DECAY;
 		note->env_step = env.d_step; // times some velocity modifier
 	}
 	else if(note->state == DECAY)
 	{
+		note->env_table = (uint16_t)amp_sustain;
 		note->state = SUSTAIN;
 		note->env_step = env.s_step; // times some velocity modifier
 	}
 	else if(note->state == SUSTAIN)
 	{
+		note->env_table = (uint16_t)amp_release;
 		note->state = RELEASE;
 		note->env_step = env.r_step; // times some velocity modifier
 	}

@@ -20,6 +20,7 @@ struct note_t {
 	uint8_t step;
 	uint16_t env_phase;
 	uint8_t env_step;
+	uint16_t env_table;
 };
 
 struct envelope {
