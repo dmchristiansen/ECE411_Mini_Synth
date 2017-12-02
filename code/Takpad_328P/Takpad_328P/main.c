@@ -28,9 +28,9 @@
  */ 
 
 /*
- * Notes on frequencies:  THIS IS WRONG NOW
- *  At 16MHz, the TC1 PWM is 62.5kHz
- *  With a 256 element sine wave table, size 1 steps give ~244 Hz
+ * Notes on frequencies:
+ *  At 20MHz, 
+ *
  *
  *  For an LFO, TC2 with a pre-scaler of 128 gives a TC clock of 125kHz
  *  If the counter counted to 64 before resetting, it would overflow at ~1953Hz
@@ -50,13 +50,13 @@
 struct note_t note[4];
 struct envelope env;
 uint8_t LFO_phase = 0;
-uint16_t timer_val = 363;
+uint16_t timer_val = 453;
 
 int main(void)
 {
-	// We're only using high byte of sensor readings
-	// sensor_threshold should be (threshold >> 2)
-	uint8_t sensor_threshold = 0x32; 
+	// Sensor readings are 0 - 255 since
+	// we're only using high byte of sensor readings
+	uint8_t sensor_threshold = 0x10;
 	
 	// Storage for ADC readings
 	uint8_t reading[4] = {0}, prev_reading[4] = {0}, peak_reading[4] = {0};
@@ -80,6 +80,7 @@ int main(void)
 				PORTD |= (1 << i);
 			else
 				PORTD &= ~(1 << i);
+			
 			
 			// Move to next phase of envelope
 			if((note[i].env_phase & 0x2000) && (note[i].state != OFF))
