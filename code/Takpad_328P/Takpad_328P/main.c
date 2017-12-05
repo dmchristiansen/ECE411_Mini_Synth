@@ -50,7 +50,7 @@
 struct note_t note[4];
 struct envelope env;
 uint8_t LFO_phase = 0;
-uint16_t timer_val = 453;
+uint16_t timer_val = 363;
 
 int main(void)
 {
@@ -100,7 +100,7 @@ int main(void)
 			{
 				if ((prev_reading[i] > reading[i]) & trigger[i])
 				{
-					note[i].velocity = peak_reading[i];
+					note[i].velocity = peak_reading[i] >> 2;
 					start_note(&note[i]);
 					peak_reading[i] = 0;
 				}
@@ -127,20 +127,12 @@ ISR(TIMER1_OVF_vect)
 		LFO_phase++;
 	}
 	ICR1 = timer_val + (sine[LFO_phase] >> 3);
-	
-	// Sum the wave table values of  all four notes (inactive notes should be 0)
-	/*int duty_cycle = 127 +
-	((((sine[note[0].phase] + saw[note[0].phase >> 1]) >> 1)
-	+((sine[note[1].phase] + saw[note[1].phase >> 1]) >> 1)
-	+((sine[note[2].phase] + saw[note[2].phase >> 1]) >> 1)
-	+((sine[note[3].phase] + saw[note[3].phase >> 1]) >> 1)) >> 2);
-	*/
-	
+
 	int duty_cycle = 127 +
-	(((((int8_t)pgm_read_byte(sine + note[0].phase) * (int8_t)pgm_read_byte(note[0].env_table + (note[0].env_phase >> 6))) >> 7)
-	+ (((int8_t)pgm_read_byte(sine + note[1].phase) * (int8_t)pgm_read_byte(note[1].env_table + (note[1].env_phase >> 6))) >> 7)
-	+ (((int8_t)pgm_read_byte(sine + note[2].phase) * (int8_t)pgm_read_byte(note[2].env_table + (note[2].env_phase >> 6))) >> 7)
-	+ (((int8_t)pgm_read_byte(sine + note[3].phase) * (int8_t)pgm_read_byte(note[3].env_table + (note[3].env_phase >> 6))) >> 7)) >> 2);
+	(((((int8_t)pgm_read_byte(kick + (note[0].phase >> 2)) * (int8_t)pgm_read_byte(note[0].env_table + (note[0].env_phase >> 6))) >> 7)
+	+ (((int8_t)pgm_read_byte(clap + (note[1].phase >> 2)) * (int8_t)pgm_read_byte(note[1].env_table + (note[1].env_phase >> 6))) >> 7)
+	+ (((int8_t)pgm_read_byte(kick + (note[2].phase >> 2)) * (int8_t)pgm_read_byte(note[2].env_table + (note[2].env_phase >> 6))) >> 7)
+	+ (((int8_t)pgm_read_byte(kick + (note[3].phase >> 2)) * (int8_t)pgm_read_byte(note[3].env_table + (note[3].env_phase >> 6))) >> 7)) >> 2);
 	
 	// Update duty cycle register
 	OCR1AL = duty_cycle;
@@ -150,8 +142,8 @@ ISR(TIMER1_OVF_vect)
 		// Increment phase accumulator
 		if(note[i].state != OFF)
 		{
-			note[i].phase += note[i].step; // plus envelope freq shift
-			note[i].env_phase += note[i].env_step;
+			note[i].phase = (note[i].phase + note[i].step + note[i].velocity) & 0x07FF; // plus envelope freq shift
+			note[i].env_phase += note[i].env_step + note[i].velocity;
 		}
 	}
 	

@@ -16,7 +16,7 @@ enum note_state {
 struct note_t {
 	enum note_state state;
 	uint8_t velocity;
-	uint8_t phase;
+	uint16_t phase;
 	uint8_t step;
 	uint16_t env_phase;
 	uint8_t env_step;
