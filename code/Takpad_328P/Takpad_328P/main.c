@@ -1,7 +1,7 @@
 /*
  * Takpad_328P.c
- * Version 0.0.6
- * Last updated: 11/21/2017
+ * Version 0.1.0
+ * Last updated: 12/06/2017
  * Author:  ECE411 Group 11, Fall 2017
  */
 
@@ -10,17 +10,9 @@
  * 
  * TO DO:
  *
- *  Make larger tables?  512 might not suck
- *
  *  Add frequency modulation based on ADSR tables?
  *
- *  Tune envelope speed (make the slowest slower)
- *
  *  Tune notes (which notes should we play?)
- *
- *  Create more complex wave tables
- *   
- *  Waveshaping!
  *
  *  Set up SD Card interface
  *   Probably just import a library
@@ -56,7 +48,7 @@ int main(void)
 {
 	// Sensor readings are 0 - 255 since
 	// we're only using high byte of sensor readings
-	uint8_t sensor_threshold = 0x10;
+	uint8_t sensor_threshold = 0x11;
 	
 	// Storage for ADC readings
 	uint8_t reading[4] = {0}, prev_reading[4] = {0}, peak_reading[4] = {0};
@@ -83,12 +75,13 @@ int main(void)
 			
 			
 			// Move to next phase of envelope
-			if((note[i].env_phase & 0x2000) && (note[i].state != OFF))
+			if((note[i].env_phase & 0x4000) && (note[i].state != OFF))
 				update_note(&note[i]);
 			
 			// update sensor reading
 			prev_reading[i] = reading[i];
-			reading[i] = read_ADC(i);
+			//for(int j = 0; j < 4; j++)
+				reading[i] = read_ADC(i);
 			
 			// update note state
 			if (reading[i] >= sensor_threshold)
@@ -96,14 +89,23 @@ int main(void)
 				peak_reading[i] = reading[i];
 				trigger[i] = 1;
 			}
+			/*
 			else
 			{
 				if ((prev_reading[i] > reading[i]) & trigger[i])
 				{
-					note[i].velocity = peak_reading[i] >> 2;
+					note[i].velocity = peak_reading[i] >> 3;
 					start_note(&note[i]);
 					peak_reading[i] = 0;
 				}
+				trigger[i] = 0;
+			}
+			*/
+			else if (((peak_reading[i] - reading[i]) > 10) & trigger[i])
+			{
+				note[i].velocity = peak_reading[i] >> 2;
+				start_note(&note[i]);
+				peak_reading[i] = 0;
 				trigger[i] = 0;
 			}
 		}
@@ -117,7 +119,7 @@ ISR(TIMER1_OVF_vect)
 	// The OCF1x flag will be set upon a match
 	// If OCIE1x is enabled, an interrupt will be generated as well
 	// The OCF1x flag will be cleared when the interrupt is serviced
-	// Set PWM duty cycle by altering OCR1AL
+	// Set PWM duty cycle by altering OCR1A
 	
 	// Increment LFO phase on compare match
 	
@@ -129,25 +131,23 @@ ISR(TIMER1_OVF_vect)
 	ICR1 = timer_val + (sine[LFO_phase] >> 3);
 
 	int duty_cycle = 127 +
-	(((((int8_t)pgm_read_byte(kick + (note[0].phase >> 2)) * (int8_t)pgm_read_byte(note[0].env_table + (note[0].env_phase >> 6))) >> 7)
-	+ (((int8_t)pgm_read_byte(clap + (note[1].phase >> 2)) * (int8_t)pgm_read_byte(note[1].env_table + (note[1].env_phase >> 6))) >> 7)
-	+ (((int8_t)pgm_read_byte(kick + (note[2].phase >> 2)) * (int8_t)pgm_read_byte(note[2].env_table + (note[2].env_phase >> 6))) >> 7)
-	+ (((int8_t)pgm_read_byte(kick + (note[3].phase >> 2)) * (int8_t)pgm_read_byte(note[3].env_table + (note[3].env_phase >> 6))) >> 7)) >> 2);
+	(((((int8_t)pgm_read_byte(kick + (note[0].phase >> 2)) * (int8_t)pgm_read_byte(note[0].env_table + (note[0].env_phase >> 7))) >> 7)
+	+ (((int8_t)pgm_read_byte(snare + (note[1].phase >> 2)) * (int8_t)pgm_read_byte(note[1].env_table + (note[1].env_phase >> 7))) >> 7)
+	+ (((int8_t)pgm_read_byte(clap + (note[2].phase >> 2)) * (int8_t)pgm_read_byte(note[2].env_table + (note[2].env_phase >> 7))) >> 7)
+	+ (((int8_t)pgm_read_byte(timp + (note[3].phase >> 2)) * (int8_t)pgm_read_byte(note[3].env_table + (note[3].env_phase >> 7))) >> 7)) >> 2);
 	
 	// Update duty cycle register
-	OCR1AL = duty_cycle;
+	OCR1A = (duty_cycle < ICR1) ? duty_cycle : (OCR1A - 1);
 	
 	for(int i = 0; i < 4; i++)
 	{
 		// Increment phase accumulator
 		if(note[i].state != OFF)
 		{
-			note[i].phase = (note[i].phase + note[i].step + note[i].velocity) & 0x07FF; // plus envelope freq shift
-			note[i].env_phase += note[i].env_step + note[i].velocity;
+			note[i].phase = (note[i].phase + note[i].step + note[i].velocity) & 0x07FF;
+			note[i].env_phase += note[i].env_step;
 		}
 	}
-	
-	// GTCCR |= 0x8001; // This holds the clock prescaler in reset, halting the counter
 }
 
 // Set up note values to begin playing or restart
@@ -156,7 +156,7 @@ void start_note(struct note_t* note)
 	if(note->state == OFF)
 	{
 		note->env_phase = 0;
-		note->env_step = env.a_step;
+		note->env_step = env.a_step + note->velocity;
 	}
 	else
 	{
@@ -167,7 +167,7 @@ void start_note(struct note_t* note)
 	}
 	note->env_table = (uint16_t)amp_attack;
 	note->state = ATTACK;
-	note->env_step = env.a_step; // times some velocity modifier
+	note->env_step = env.a_step + note->velocity;
 }
 
 // Reset note to known state
@@ -186,19 +186,19 @@ void update_note(struct note_t* note)
 	{
 		note->env_table = (uint16_t)amp_decay;
 		note->state = DECAY;
-		note->env_step = env.d_step; // times some velocity modifier
+		note->env_step = env.d_step + note->velocity;
 	}
 	else if(note->state == DECAY)
 	{
 		note->env_table = (uint16_t)amp_sustain;
 		note->state = SUSTAIN;
-		note->env_step = env.s_step; // times some velocity modifier
+		note->env_step = env.s_step;
 	}
 	else if(note->state == SUSTAIN)
 	{
 		note->env_table = (uint16_t)amp_release;
 		note->state = RELEASE;
-		note->env_step = env.r_step; // times some velocity modifier
+		note->env_step = env.r_step;
 	}
 	else if(note->state == RELEASE)
 	{
@@ -209,6 +209,15 @@ void update_note(struct note_t* note)
 // Read ADC, blocking read
 uint8_t read_ADC(uint8_t ADC_Channel)
 {
+	
+	// Set ADC to read ground
+	ADMUX = (ADMUX & 0xF0) | 0x04;
+	// Set start conversion bit
+	ADCSRA |= (1 << ADSC);
+	// Loop until conversion is complete
+	while (ADCSRA & (1 << ADSC));
+	
+	
 	// Set channel mux in ADMUX
 	ADMUX = (ADMUX & 0xF0) | (ADC_Channel & 0x0F);
 	// Set start conversion bit
